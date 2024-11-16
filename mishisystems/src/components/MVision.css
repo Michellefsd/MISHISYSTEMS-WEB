@@ -1,0 +1,82 @@
+/* General styles */
+.about-us-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--primary-lighter-1);
+  font-family: 'Raleway', sans-serif; 
+  background: radial-gradient(
+    circle, /* Define que el degradado sea circular */
+    var(--primary-darker-3) 0%, /* Color oscuro en el centro */
+    var(--primary-color) 100% /* Color más claro en el exterior */
+  );  
+}
+
+.section-title {
+  font-size: 32px;
+  color: var(--primary-lighter-1); /* Cambié el color a primario corporativo */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image styling */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.intro-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Values icons section */
+.values-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.icon-container {
+  text-align: center;
+  margin: 10px;
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Unique proposition styling */
+.unique-proposition {
+  margin-top: 30px;
+}
+
+.proposition-title {
+  font-size: 26px;
+  color: var(--primary-lighter-1); /* Color primario corporativo */
+  margin-bottom: 10px;
+}
+
+.proposition-text {
+  font-size: 20px;
+  color: var(--white-color); 
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.mission-text {
+  font-size: 20px;
+  color: var(--white-color); 
+}
+
+.intro-text {
+  font-size: 20px;
+  color: #D8D9E5; 
+}

@@ -1,0 +1,16 @@
+.custom-button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color); /* Color de énfasis original del botón */
+  color: var(--white-color); /* Texto en blanco */
+  font-family: 'Raleway', sans-serif; /* Fuente corporativa */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: var(--tertiary-color); /* Cambia el color en hover */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); 
+}

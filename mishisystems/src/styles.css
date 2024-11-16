@@ -1,0 +1,136 @@
+/* Variables de color */
+:root {
+  --primary-color: #008099; /* Color corporativo principal */
+  --secondary-color: #782180; /* Segundo color corporativo */
+  --tertiary-color: #6BBFA3; /* Tercer color corporativo */
+  --light-bg: #EFE0D3; /* Fondo claro */
+  --dark-bg: #3A417D; /* Fondo oscuro */
+  --black-color: #000000; /* Color negro */
+  --white-color: #FFFFFF; /* Color blanco */
+  
+  /* Variantes más claras y oscuras del color primario */
+  --primary-lighter-1: #8E4B94;
+  --primary-lighter-2: #AE7AB3;
+  --primary-lighter-3: #C9A6CC;
+  --primary-lighter-4: #E4D3E6;
+  --primary-darker-1: #681B6E;
+  --primary-darker-2: #56135A;
+  --primary-darker-3: #430A44;
+  --primary-darker-4: #2D002A;
+}
+
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@100..900&display=swap');
+
+/* Configuración de tipografía */
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Estilos para el logotipo y nombres de la empresa */
+.logo {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Estilos básicos para imágenes */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para botones */
+button {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--tertiary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Enlaces */
+a {
+  font-family: 'Raleway', sans-serif;
+  color: var(--black-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* Reduce tamaño de texto en pantallas pequeñas */
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 85%; 
+  }
+}

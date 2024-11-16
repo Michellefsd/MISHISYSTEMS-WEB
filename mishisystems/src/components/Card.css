@@ -1,0 +1,76 @@
+/* General styles for the card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  margin: 20px;
+  text-align: center;
+  position: relative; /* Para posicionar el botón */
+  min-height: 400px; /* Asegura que todas las tarjetas tengan la misma altura mínima */
+  background-color: var(--light-bg); /* Fondo claro corporativo */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.card-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Title styling */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color); /* Color primario para el título */
+}
+
+/* Description styling */
+.card-description {
+  font-size: 16px;
+  color: var(--black-color); /* Color negro para la descripción */
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Button styling */
+.card-button {
+  background-color: var(--highlight-color); /* Color de énfasis para el botón */
+  color: var(--white-color); /* Texto en blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 18px; /* Fijamos el botón a 18px del borde inferior */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición para que quede centrado */
+}
+
+.card-button:hover {
+  background-color: var(--secondary-color); /* Cambia el color del botón al hacer hover */
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 769px) {
+  .card {
+    width: 300px;
+  }
+}

@@ -1,0 +1,34 @@
+.testimonial-card {
+  display: flex; /* Para alinear la imagen y el texto horizontalmente */
+  flex: 0 0 auto; /* Evita que las tarjetas se reduzcan más de lo necesario */
+  width: 450px; /* Ajusta el tamaño según tu diseño */
+  padding: 20px;
+  border: 1px solid var(--primary-color); /* Borde con el color primario */
+  border-radius: 10px;
+  background-color: var(--light-bg); /* Fondo claro */
+  color: var(--black-color); /* Texto en negro */
+  text-align: left; /* Alinea el texto a la izquierda */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para las tarjetas */
+}
+
+.testimonial-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+  margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinea el texto verticalmente en el centro */
+}
+
+.testimonial-content p {
+  margin: 0 0 10px 0; /* Margen inferior para separar el nombre del testimonio */
+}
+
+.testimonial-content span {
+  font-weight: bold;
+}
