@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import ServiceWrapper from './pages/ServiceWrapper'; // Importa el componente para servicios individuales
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceKey" element={<ServiceWrapper />} />        {/* Ruta dinámica */}
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />

@@ -11,31 +11,37 @@ const MVision = () => {
         <h1 className="section-title">Sobre Nosotros</h1>
 
         {/* Espacio para una imagen representativa */}
-        
+
         {/* <div className="image-container">
           <img src="/images/sobre-nosotros.jpg" alt="Sobre nosotros" className="intro-image" />
         </div>
         */}
 
         <p className="intro-text">
-          <strong>Mishi Systems</strong> es una empresa que ofrece soluciones digitales 
-          para empresas que buscan optimizar sus procesos, automatizar ventas y expandir 
-          su alcance sin necesidad de aumentar costos operativos o personal. 
-          Nos especializamos en acompañar a las empresas en su transformación digital 
+          <strong>Mishi Systems</strong> es una empresa que ofrece soluciones digitales
+          para empresas que buscan optimizar sus procesos, automatizar ventas y expandir
+          su alcance sin necesidad de aumentar costos operativos o personal.
+          Nos especializamos en acompañar a las empresas en su transformación digital
           para que puedan crecer de manera eficiente y sostenida.
         </p>
 
-        <h2 className="mission-title">Nuestra Misión</h2>
+        <br></br>
+        <br></br>
+        <h2 className="section-title">Nuestra Misión</h2>
         <p className="mission-text">
-        Facilitar la transformación digital para empresas de todo el mundo, 
-        ofreciendo soluciones personalizadas que aumenten su eficiencia 
-        operativa y simplifiquen la interacción con sus clientes.
+          Facilitar la transformación digital para empresas de todo el mundo,
+          ofreciendo soluciones personalizadas que aumenten su eficiencia
+          operativa y simplifiquen la interacción con sus clientes.
         </p>
+        <br></br>
       </section>
 
       {/* Módulo 2: Nuestros Valores con Íconos */}
       <section className="values-section">
+      <br></br>
+      <br></br>
         <h2 className="section-title">Nuestros Valores</h2>
+        <br></br>
 
         {/* Íconos representando valores */}
         <div className="values-icons">
@@ -62,6 +68,8 @@ const MVision = () => {
         </div>
 
         <div className="unique-proposition">
+        <br></br>
+        <br></br>
           <h3 className="proposition-title">¿Por Qué Elegir Mishi Systems?</h3>
           <p className="proposition-text">
             Mishi Systems facilita la transformación digital de manera fluida y sencilla. Ayudamos a las empresas a automatizar procesos, optimizar la presencia digital y alcanzar audiencias internacionales con contenidos multilingües.

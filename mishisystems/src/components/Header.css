@@ -1,7 +1,6 @@
 .header {
-  background-color: var(--light-bg); /* Fondo claro según tu esquema */
-  padding: 20px;
-  position: relative; /* Permite posicionar el logo relativo al header */
+  padding: 16px;
+  position: relative;
 }
 
 .main-menu ul {
@@ -25,7 +24,7 @@
 
 .main-menu ul li a:hover {
   color: var(--primary-darker-3);
-  text-shadow: 0px 0px 10px rgba(201, 166, 204, 0.7); 
+  text-shadow: 0px 0px 10px rgba(201, 166, 204, 0.7);
 }
 
 /* Efecto hover con una leve sombra de fondo */
@@ -36,62 +35,69 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--primary-color); /* Color de la línea bajo el link */
+  background-color: var(--primary-color);
+  /* Color de la línea bajo el link */
   transition: width 0.3s ease;
 }
 
 .main-menu ul li a:hover::before {
-  width: 100%; 
+  width: 100%;
 }
+
 /* Contenedor del logo y el círculo */
 .logo-container {
-  position: absolute; /* Esto permite superponerlo al banner y que sobresalga */
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 140px;
-  height: 140px; /* Asegura que el contenedor tenga el mismo tamaño que el círculo */
-  top: 100%; /* Para que sobresalga del header */
-  left: 10%; /* A la izquierda en pantallas grandes */
-  transform: translateY(-50%); /* Sobresale hacia abajo */
-  z-index: 10; /* Superpondrá al banner */
+  height: 140px;
+  top: 100%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 /* Estilos del logo */
 .logo {
   width: 96px;
   height: auto;
-  z-index: 11; /* Asegura que el logo esté encima del círculo */
+  z-index: 11;
 }
 
 /* Círculo de fondo */
 .div-de-img {
   width: 140px;
   height: 140px;
-  background-color: var(--light-bg);
+  background-color: rgba(255, 255, 255, .5);
   border-radius: 50%;
   position: absolute;
   z-index: 9;
-  top: 0; /* Alinea el círculo con el contenedor */
+  top: 0;
+  /* Alinea el círculo con el contenedor */
   left: 0;
 }
 
 /* Ajustes para pantallas más pequeñas (centrar el logo y círculo) */
 @media (max-width: 768px) {
+  .header {
+    padding: 32px;
+  }
+
   .logo-container {
-    left: 50%; /* Centra el logo en pantallas pequeñas */
-    transform: translate(-50%, -50%); /* Ajusta el centrado horizontal y vertical */
-    width: 120px; /* Tamaño reducido del contenedor */
-    height: 120px; /* Ajusta la altura para que coincida con el nuevo tamaño del círculo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
   }
 
   .logo {
-    width: 82px; /* Tamaño más pequeño del logo */
+    width: 82px;
   }
 
   .div-de-img {
-    width: 120px; /* Ajusta el tamaño del círculo */
+    width: 120px;
     height: 120px;
   }
 }
@@ -101,35 +107,38 @@
   display: none;
   cursor: pointer;
   font-size: 28px;
-  color: var(--accent-color); /* Color del botón hamburguesa */
+  color: var(--accent-color);
   background: none;
   border: none;
   position: absolute;
-  right: 20px; /* Alinea el botón hamburguesa a la derecha */
-  top: 0px; /* Ajusta la posición vertical */
+  right: 20px;
+  top: 0px;
+  z-index: 11;
 }
 
 /* Estilos para pantallas pequeñas (menores de 769px) */
 @media (max-width: 769px) {
+
   /* Ocultar el menú normal y mostrar el menú hamburguesa */
   .main-menu ul {
     display: none;
-    flex-direction: column; /* El menú hamburguesa será vertical */
-    background-color: var(--light-bg); /* Fondo claro */
+    flex-direction: column;
+    background-color: var(--light-bg);
     position: absolute;
-    top: 60px; /* Ajusta según el tamaño de tu header */
-    right: 0;  /* Posiciona el menú en el borde derecho */
-    width: 80%; /* Ajusta el ancho del menú */
+    top: 60px;
+    right: 0;
+    width: 80%;
   }
 
   /* Mostrar el botón hamburguesa */
   .hamburger-menu {
     display: block;
+    top: 0;
   }
 
   /* Mostrar el menú hamburguesa al hacer clic */
   .main-menu.active ul {
-    display: flex; /* Mostrar el menú hamburguesa */
+    display: flex;
   }
 
   /* Estilos del menú hamburguesa desplegado */

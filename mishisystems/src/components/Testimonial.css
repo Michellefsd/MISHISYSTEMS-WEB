@@ -5,7 +5,6 @@
   padding: 20px;
   border: 1px solid var(--primary-color); /* Borde con el color primario */
   border-radius: 10px;
-  background-color: var(--light-bg); /* Fondo claro */
   color: var(--black-color); /* Texto en negro */
   text-align: left; /* Alinea el texto a la izquierda */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para las tarjetas */

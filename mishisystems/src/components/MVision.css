@@ -1,21 +1,21 @@
 /* General styles */
 .about-us-container {
-  padding: 40px;
-  max-width: 1200px;
+  padding: 80px 120px;
   margin: 0 auto;
   line-height: 1.6;
-  color: var(--primary-lighter-1);
+  color: var(--primary-lighter-4);
   font-family: 'Raleway', sans-serif; 
-  background: radial-gradient(
-    circle, /* Define que el degradado sea circular */
-    var(--primary-darker-3) 0%, /* Color oscuro en el centro */
-    var(--primary-color) 100% /* Color más claro en el exterior */
-  );  
+  background: linear-gradient(
+    to bottom, 
+    #37457F 30%, /* Color superior */
+    #017F98 100% 
+);
+
 }
 
 .section-title {
   font-size: 32px;
-  color: var(--primary-lighter-1); /* Cambié el color a primario corporativo */
+  color: var(--primary-lighter-4);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -33,7 +33,7 @@
   border-radius: 8px;
 }
 
-/* Values icons section */
+
 .values-icons {
   display: flex;
   justify-content: space-around;
@@ -53,14 +53,14 @@
   margin-bottom: 10px;
 }
 
-/* Unique proposition styling */
+
 .unique-proposition {
   margin-top: 30px;
 }
 
 .proposition-title {
   font-size: 26px;
-  color: var(--primary-lighter-1); /* Color primario corporativo */
+  color: var(--primary-lighter-4);
   margin-bottom: 10px;
 }
 
@@ -69,6 +69,10 @@
   color: var(--white-color); 
   margin-bottom: 20px;
   text-align: justify;
+}
+
+.mission-title {
+  text-align: center;
 }
 
 .mission-text {

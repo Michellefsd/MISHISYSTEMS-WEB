@@ -1,7 +1,6 @@
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--light-bg);
   color: var(--black-color); 
   font-family: 'Raleway', sans-serif;
   border-top: 2px solid var(--primary-color); 

@@ -7,8 +7,11 @@
   --dark-bg: #3A417D; /* Fondo oscuro */
   --black-color: #000000; /* Color negro */
   --white-color: #FFFFFF; /* Color blanco */
+  --grey-1: #F3F3F3;
+  --grey-2: #D9D9D9;
   
   /* Variantes más claras y oscuras del color primario */
+  
   --primary-lighter-1: #8E4B94;
   --primary-lighter-2: #AE7AB3;
   --primary-lighter-3: #C9A6CC;
@@ -17,6 +20,11 @@
   --primary-darker-2: #56135A;
   --primary-darker-3: #430A44;
   --primary-darker-4: #2D002A;
+  --secondary-lighter-1: #37457F;
+  --secondary-lighter-3: #017F98;
+  --secondary-darker-4: #002E38;
+  --tertiary-darker-4: #1E4237;
+  --tertiary-darker-3: #386758;
 }
 
 /* Importar las fuentes */
@@ -25,7 +33,7 @@
 /* Configuración de tipografía */
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: var(--primary-color);
+  background: linear-gradient(to bottom, var(--white-color), var(--light-bg));
   color: var(--black-color);
   font-size: 1rem;
   line-height: 1.6;
@@ -81,7 +89,7 @@ img, video {
 /* Estilos para botones */
 button {
   font-family: 'Raleway', sans-serif;
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-lighter-1);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -91,7 +99,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-lighter-3);
 }
 
 /* Enlaces */
