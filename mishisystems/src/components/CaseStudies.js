@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.css';
 import '../styles.css';
+import './CaseStudies.css'
 
 const CaseStudies = ({ cases }) => {
     return (

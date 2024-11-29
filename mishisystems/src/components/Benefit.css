@@ -1,5 +1,7 @@
 .benefits {
-    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--grey-1); /* Fondo claro */
+    border-radius: 10px;
 }
 
 .benefits h3 {
@@ -15,10 +17,11 @@
 }
 
 .benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--grey-2);
+    border-radius: 5px;
 }
+  
 
 .benefit-icon {
     font-size: 2rem;

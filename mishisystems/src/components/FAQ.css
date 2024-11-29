@@ -1,0 +1,21 @@
+.faq-section {
+    margin: 40px 0;
+  }
+  
+  .faq-question {
+    background-color: var(--grey-2);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid var(--primary-color);
+  }
+  
+  .faq-question:hover {
+    background-color: var(--grey-1);
+  }
+  
