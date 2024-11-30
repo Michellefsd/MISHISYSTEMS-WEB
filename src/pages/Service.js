@@ -4,7 +4,6 @@ import Description from '../components/DescriptionService';
 import WhatWeOffer from '../components/WhatWeOffer';
 import Benefits from '../components/Benefits';
 import CaseStudies from '../components/CaseStudies';
-import FAQ from '../components/FAQ';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Approach from '../components/Approach';
 import Button from '../components/Button';
@@ -28,17 +27,18 @@ const Service = ({ serviceKey }) => {
         backgroundPosition={service.Hero.backgroundPosition}
       />
       <div className="service-content">
-        <Description text={service.description} />
+        <Description text={service.descripcion} />
         <WhatWeOffer offers={service.whatWeOffer} />
         <Benefits benefits={service.benefits} />
         <Approach text={service.approach} />
         <CaseStudies cases={service.caseStudies} />
         <WhyChooseUs reasons={service.whyChooseUs} />
         
+        <div className="service-cta">
+        <Button label={service.callToAction.text} text={service.callToAction.text} />
       </div>
-      <div className="service-cta">
-        <Button label="Contáctanos" text="Contáctanos" />
       </div>
+    
     </div>
   );
 };

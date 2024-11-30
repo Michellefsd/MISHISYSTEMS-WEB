@@ -9,14 +9,14 @@ const ServicesData = [
     Hero: {
       titulo: "Transformación Digital",
       parrafo: "Impulsa tu negocio hacia el futuro.",
-      backgroundImage: "/images/digital-transformation-hero.jpg",
+      backgroundImage: "/images/transformacion-digital.jpg",
       height: "400px",
       backgroundPosition: "center",
     },
-    description:
-      "La transformación digital no es una opción, es una necesidad para competir en el mercado actual. En Mishi Systems, ayudamos a empresas consolidadas y en crecimiento a digitalizar y automatizar sus procesos, optimizando recursos y maximizando resultados.",
+    descripcion:
+      "La transformación digital es una necesidad para competir en el mercado actual. En Mishi Systems, ayudamos a empresas consolidadas y en crecimiento a digitalizar y automatizar sus procesos, optimizando recursos y maximizando resultados.",
     benefits: [
-      "Aumenta tu competitividad: Adopta herramientas que te permiten mantenerte a la vanguardia en tu industria.",
+      "Aumenta tu competitividad: Adopta herramientas que te permiten mantenerte a la cabeza en tu industria.",
       "Optimiza recursos: Reduce costos operativos mientras aumentas la productividad.",
       "Mejora la experiencia del cliente: Ofrece interacciones más rápidas, personalizadas y satisfactorias.",
       "Escalabilidad: Prepara tu negocio para crecer sin comprometer la calidad o eficiencia.",
@@ -28,9 +28,9 @@ const ServicesData = [
           "Evaluamos tus procesos actuales para identificar áreas clave de mejora.",
       },
       {
-        title: "Automatización de ventas",
+        title: "Automatización de marketing",
         description:
-          "Implementamos herramientas como HubSpot para optimizar el ciclo de ventas, desde la captación de leads hasta el cierre.",
+          "Implementamos herramientas como HubSpot para optimizar el ciclo de ventas, desde la captación de leads hasta el soporte para clientes.",
       },
       {
         title: "Digitalización de procesos",
@@ -52,13 +52,14 @@ const ServicesData = [
       "Trabajamos contigo para entender tus objetivos y diseñar una estrategia digital a medida. Desde la implementación de tecnología hasta el seguimiento de resultados, estamos contigo en cada paso del camino.",
     caseStudies: [
       {
-        title: "Caso de éxito: Empresa Ejemplo",
+        title: "Caso de éxito: T2Company",
+        image: "/images/t2c.png",
         result:
-          "Empresas como [Nombre de Empresa Ejemplo] han aumentado su productividad en un 40% y reducido costos en un 25% gracias a nuestras soluciones de transformación digital.",
+          "Empresas como T2Company han aumentado su alcance a otros países estableciendo negocios en otros países, cumpliendo así su objetivo, sin aumentar sus costos de forma significativa, gracias a nuestras soluciones de transformación digital.",
       },
     ],
     whyChooseUs: [
-      "Experiencia en implementación de CRMs como HubSpot.",
+      "Experiencia en implementación de CRMs.",
       "Soluciones integrales y personalizadas.",
       "Equipo experto en tecnologías avanzadas y procesos empresariales.",
     ],
@@ -101,16 +102,16 @@ const ServicesData = [
     Hero: {
       titulo: "Diseño y Desarrollo de Páginas Web",
       parrafo: "Convierte tu página web en el corazón de tu negocio digital.",
-      backgroundImage: "/images/web-design-hero.jpg",
+      backgroundImage: "/images/web-page.jpg",
       height: "400px",
       backgroundPosition: "center",
     },
-    description:
-      "En Mishi Systems, creamos páginas web que no solo lucen bien, sino que funcionan a la perfección. Nuestro servicio de diseño y desarrollo web combina creatividad, funcionalidad y tecnología para ofrecer una experiencia excepcional a tus clientes.",
+    descripcion:
+      "En Mishi Systems, creamos páginas web que no solo lucen bien, sino que funcionan a la perfección. Nuestro servicio de diseño y desarrollo web combina creatividad, funcionalidad y tecnología para ofrecer una experiencia excepcional a tus clientes.\n \t Podemos integrarnos a una página ya creada usando los lenguajes o frameworks previamente elegidos o empezar una página desde cero, enfocándonos en mostrar el servicio o producto de tu empresa y facilitar el acceso a información y compra disminuyendo el esfuerzo personal en el proceso",
     benefits: [
       "Mejora tu presencia online: Una página web profesional es tu mejor carta de presentación.",
       "Aumenta tus conversiones: Diseñamos sitios enfocados en guiar a los visitantes hacia acciones clave, como comprar, registrarse o contactarte.",
-      "Simplifica la gestión: Desarrollamos sitios fáciles de mantener, con paneles intuitivos para que tengas el control.",
+      "Optimiza la experiencia del usuario: Creamos interfaces rápidas, claras y accesibles para ofrecer la mejor navegación posible.",
     ],
     whatWeOffer: [
       {
@@ -145,13 +146,13 @@ const ServicesData = [
       {
         title: "Caso de éxito: Empresa Ejemplo",
         result:
-          "Gracias a nuestras páginas web personalizadas, empresas como [Nombre de Empresa Ejemplo] han incrementado en un 50% sus conversiones en línea y duplicado su tráfico orgánico en solo seis meses.",
+          "Gracias a nuestras páginas web personalizadas, empresas como T2Company han logrado atraer a más clientes potenciales y aumentar significativamente la visibilidad de sus productos en línea. Ahora, sus clientes pueden explorar fácilmente las características y el funcionamiento de sus productos a través de una plataforma intuitiva y detallada."
       },
     ],
     whyChooseUs: [
       "Enfoque en la usabilidad y la experiencia del cliente.",
       "Diseños modernos y funcionales adaptados a cualquier industria.",
-      "Amplia experiencia en integración de herramientas como HubSpot, CRM y más.",
+      "Amplia experiencia en integración de herramientas como CRMs y más.",
     ],
     callToAction: {
       text: "¡Agenda una consulta con nosotros!",
@@ -188,11 +189,11 @@ const ServicesData = [
     Hero: {
       titulo: "Integración de CRMs",
       parrafo: "Optimiza la relación con tus clientes y potencia tus resultados.",
-      backgroundImage: "/images/crm-hero.jpg",
+      backgroundImage: "/images/hubspot.png",
       height: "400px",
       backgroundPosition: "center",
     },
-    description:
+    descripcion:
       "En Mishi Systems, entendemos que un CRM (Customer Relationship Management) es mucho más que una herramienta, es el corazón de tu negocio. Nuestro servicio de integración de CRMs está diseñado para que tu equipo tenga todo lo necesario para gestionar clientes, ventas y procesos con eficacia.",
     benefits: [
       "Mejora la gestión de clientes: Centraliza toda la información de tus clientes en un solo lugar para tomar decisiones más rápidas y efectivas.",
@@ -224,12 +225,12 @@ const ServicesData = [
       {
         title: "Capacitación del equipo",
         description:
-          "Nos aseguramos de que tu equipo aproveche al máximo el CRM con sesiones de formación personalizadas.",
+          "Nos acercamos a tu equipo para que éste aproveche al máximo el CRM con sesiones de consultas y dirección de adaptación alas nuevas herramientas.",
       },
       {
         title: "Soporte continuo",
         description:
-          "Te acompañamos en el mantenimiento y optimización del CRM para asegurar que siempre funcione al 100%.",
+          "Te acompañamos en el mantenimiento y optimización del CRM para adaptar mejor la herramienta basados en estadísticas, y asegurar que funcione cada vez mejor",
       },
     ],
     approach:
@@ -238,11 +239,11 @@ const ServicesData = [
       {
         title: "Caso de éxito: Empresa Ejemplo",
         result:
-          "Gracias a nuestras integraciones, empresas como [Nombre de Empresa Ejemplo] han logrado un aumento del 35% en la productividad de su equipo de ventas y una reducción del 20% en el tiempo de gestión de datos.",
+        "Gracias a nuestras integraciones, empresas como T2Company han implementado exitosamente su CRM, logrando que su equipo adopte las herramientas de manera eficiente. Seguimos brindando soporte continuo para maximizar el aprovechamiento del sistema y adaptarlo a las necesidades cambiantes de la empresa."
       },
     ],
     whyChooseUs: [
-      "Especialistas certificados en HubSpot y otras plataformas líderes.",
+      "Especialistas certificados CRMs.",
       "Experiencia en diversas industrias.",
       "Soporte técnico y estratégico continuo.",
     ],
@@ -270,12 +271,12 @@ const ServicesData = [
     Hero: {
       titulo: "Soporte Automatizado",
       parrafo: "Impulsa la eficiencia con documentación y contenido visual de alto impacto.",
-      backgroundImage: "/images/automated-support-hero.jpg",
+      backgroundImage: "/images/tutorial.jpg",
       height: "400px",
       backgroundPosition: "center",
     },
-    description:
-      "En Mishi Systems, entendemos que un soporte eficiente y claro es esencial para la experiencia del cliente y la optimización operativa. Nuestro servicio de Soporte Automatizado combina documentación profesional y contenido visual impactante para transformar tus procesos en herramientas de aprendizaje y soporte autónomo.",
+    descripcion:
+      "En Mishi Systems, entendemos que un soporte eficiente y claro es esencial para la experiencia del cliente y la optimización operativa. Nuestro servicio de soporte automatizado combina documentación profesional y contenido visual impactante para transformar tus procesos en herramientas de aprendizaje y soporte autónomo.",
     benefits: [
       "Acelera el aprendizaje: Reduce el tiempo de capacitación con materiales bien estructurados y visualmente atractivos.",
       "Mejora la experiencia del cliente: Ofrece soporte claro y accesible que fortalezca la relación con tus usuarios.",
@@ -326,7 +327,7 @@ const ServicesData = [
       {
         title: "Caso de éxito: Empresa Ejemplo",
         result:
-          "Empresas como [Nombre de Empresa Ejemplo] han reducido en un 40% las consultas de soporte gracias a nuestras guías interactivas y videos tutoriales, y han aumentado la retención de clientes en un 30%.",
+         "Empresas como T2Company han logrado mejorar la experiencia de sus clientes gracias a nuestras guías tutoriales en formato PDF y videos tutoriales, que facilitan la comprensión de sus productos y servicios, reduciendo la necesidad de soporte y pudiendo presentar sus servicios y productos más allá de los límites físicos.",
       },
     ],
     whyChooseUs: [
@@ -362,11 +363,11 @@ const ServicesData = [
       titulo: "Contenido Multilingüe para Empresas Globales",
       parrafo:
         "Expande tu alcance con contenido adaptado a cada idioma y cultura.",
-      backgroundImage: "/images/multilingual-content-hero.jpg",
+      backgroundImage: "/images/services.jpg",
       height: "400px",
       backgroundPosition: "center",
     },
-    description:
+    descripcion:
       "En Mishi Systems, entendemos que la comunicación efectiva es esencial para conectar con audiencias internacionales. Nuestro servicio de contenido multilingüe está diseñado para empresas que buscan llevar sus productos o servicios más allá de las fronteras, garantizando una experiencia auténtica y personalizada para cada cliente.",
     benefits: [
       "Aumenta tu mercado objetivo: Accede a clientes en diferentes países sin barreras idiomáticas.",
@@ -394,6 +395,11 @@ const ServicesData = [
         description:
           "Nos aseguramos de que tu contenido sea fácilmente encontrado en los motores de búsqueda en cada mercado objetivo.",
       },
+      {
+        title: "Disponibilidad de idiomas",
+        description:
+          "Disponibilizamos la traducción al portugués, Inglés, Italiano, Francés y Alemán. Consulte por otros idiomas.",
+      },
     ],
     approach:
       "Nuestro equipo de expertos combina herramientas tecnológicas avanzadas con un toque humano. Nos aseguramos de que cada palabra sea significativa, relevante y atractiva para el público al que deseas llegar.",
@@ -401,7 +407,7 @@ const ServicesData = [
       {
         title: "Caso de éxito: Empresa Ejemplo",
         result:
-          "Con nuestra ayuda, empresas como [Nombre de Empresa Ejemplo] han logrado aumentar su alcance en más de 10 países, duplicando sus leads y mejorando sus tasas de conversión.",
+          "Con nuestra ayuda, empresas como T2Company han logrado aumentar su alcance en más de 10 países, extendiendo su propuesta a toda américa y gran parte de Europa.",
       },
     ],
     whyChooseUs: [

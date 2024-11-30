@@ -1,11 +1,13 @@
 .header {
   padding: 16px;
   position: relative;
+  z-index: 10;
 }
 
 .main-menu ul {
   list-style: none;
   display: flex;
+  /* Mostrar menú en escritorio */
   justify-content: flex-end;
   margin-bottom: 0;
 }
@@ -27,22 +29,6 @@
   text-shadow: 0px 0px 10px rgba(201, 166, 204, 0.7);
 }
 
-/* Efecto hover con una leve sombra de fondo */
-.main-menu ul li a::before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: var(--primary-color);
-  /* Color de la línea bajo el link */
-  transition: width 0.3s ease;
-}
-
-.main-menu ul li a:hover::before {
-  width: 100%;
-}
 
 /* Contenedor del logo y el círculo */
 .logo-container {
@@ -70,7 +56,7 @@
 .div-de-img {
   width: 140px;
   height: 140px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   position: absolute;
   z-index: 9;
@@ -102,6 +88,10 @@
   }
 }
 
+header .hamburger-menu:hover {
+  background-color: none;
+}
+
 /* Ocultar el botón hamburguesa por defecto */
 .hamburger-menu {
   display: none;
@@ -114,6 +104,7 @@
   right: 20px;
   top: 0px;
   z-index: 11;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Estilos para pantallas pequeñas (menores de 769px) */
@@ -122,23 +113,30 @@
   /* Ocultar el menú normal y mostrar el menú hamburguesa */
   .main-menu ul {
     display: none;
+    /* Ocultar menú en móviles por defecto */
     flex-direction: column;
-    background-color: var(--light-bg);
+    /* Cambiar a formato vertical */
+    background-color: rgba(239, 224, 211, .67);
     position: absolute;
     top: 60px;
     right: 0;
-    width: 80%;
+    width: 50%;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   /* Mostrar el botón hamburguesa */
   .hamburger-menu {
     display: block;
+    /* Mostrar en móviles */
     top: 0;
   }
 
   /* Mostrar el menú hamburguesa al hacer clic */
   .main-menu.active ul {
     display: flex;
+    /* Mostrar menú en móviles */
   }
 
   /* Estilos del menú hamburguesa desplegado */

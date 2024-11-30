@@ -12,10 +12,10 @@ const MVision = () => {
 
         {/* Espacio para una imagen representativa */}
 
-        {/* <div className="image-container">
-          <img src="/images/sobre-nosotros.jpg" alt="Sobre nosotros" className="intro-image" />
-        </div>
-        */}
+        { /* <div className="image-container">
+          <img src="/images/aboutus.jpg" alt="Sobre nosotros" className="intro-image" />
+        </di class="black"v>  */}
+        
 
         <p className="intro-text">
           <strong>Mishi Systems</strong> es una empresa que ofrece soluciones digitales
@@ -46,24 +46,24 @@ const MVision = () => {
         {/* Íconos representando valores */}
         <div className="values-icons">
           <div className="icon-container">
-            <img src="/icons/innovacion.png" alt="Innovación" className="value-icon" />
-            <p>Innovación</p>
+            <img src="/images/icons/innovacion.png" alt="Innovación" className="value-icon" />
+            <p class="black">Innovación</p>
           </div>
           <div className="icon-container">
-            <img src="/icons/compromiso.png" alt="Compromiso" className="value-icon" />
-            <p>Compromiso</p>
+            <img src="/images/icons/acuerdo.png" alt="Compromiso" className="value-icon" />
+            <p class="black">Compromiso</p>
           </div>
           <div className="icon-container">
-            <img src="/icons/flexibilidad.png" alt="Flexibilidad" className="value-icon" />
-            <p>Flexibilidad</p>
+            <img src="/images/icons/flexibilidad.png" alt="Flexibilidad" className="value-icon" />
+            <p class="black">Flexibilidad</p>
           </div>
           <div className="icon-container">
-            <img src="/icons/multilinguismo.png" alt="Multilingüismo" className="value-icon" />
-            <p>Multilingüismo</p>
+            <img src="/images/icons/mundial.png" alt="Multilingüismo" className="value-icon" />
+            <p class="black">Multilingüismo</p>
           </div>
           <div className="icon-container">
-            <img src="/icons/calidad.png" alt="Calidad" className="value-icon" />
-            <p>Calidad</p>
+            <img src="/images/icons/calidad.png" alt="Calidad" className="value-icon" />
+            <p class="black">Calidad</p>
           </div>
         </div>
 

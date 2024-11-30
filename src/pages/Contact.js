@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   return (
@@ -11,6 +12,7 @@ const Contact = () => {
         height="50vh"
         backgroundPosition='top'
       />
+      <ContactForm />
     </div>
   );
 };

@@ -1,0 +1,61 @@
+/* Notificación flotante */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #007bff; /* Azul predeterminado */
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+    
+  /* Estilo del botón de cierre */
+  .close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .close-button:hover {
+    color: #ccc;
+  }
+  
+  /* Tipos de notificaciones */
+  .notification.success {
+    background-color: #28a745; /* Verde para éxito */
+  }
+  
+  .notification.error {
+    background-color: #dc3545; /* Rojo para error */
+  }
+  
+  .notification.info {
+    background-color: #007bff; /* Azul para información */
+  }
+  

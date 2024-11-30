@@ -9,9 +9,7 @@
     to bottom, 
     #37457F 30%, /* Color superior */
     #017F98 100% 
-);
-
-}
+); }
 
 .section-title {
   font-size: 32px;
@@ -83,4 +81,9 @@
 .intro-text {
   font-size: 20px;
   color: #D8D9E5; 
+}
+
+.black{
+  color:black;
+  font-size: 16px;
 }

@@ -1,12 +1,12 @@
 /* Variables de color */
 :root {
-  --primary-color: #008099; /* Color corporativo principal */
-  --secondary-color: #782180; /* Segundo color corporativo */
-  --tertiary-color: #6BBFA3; /* Tercer color corporativo */
-  --light-bg: #EFE0D3; /* Fondo claro */
-  --dark-bg: #3A417D; /* Fondo oscuro */
-  --black-color: #000000; /* Color negro */
-  --white-color: #FFFFFF; /* Color blanco */
+  --primary-color: #008099;
+  --secondary-color: #782180;
+  --tertiary-color: #6BBFA3;
+  --light-bg: #EFE0D3;
+  --dark-bg: #3A417D;
+  --black-color: #000000; 
+  --white-color: #FFFFFF; 
   --grey-1: #F3F3F3;
   --grey-2: #D9D9D9;
   
@@ -96,10 +96,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--secondary-lighter-3);
 }
 
 /* Enlaces */

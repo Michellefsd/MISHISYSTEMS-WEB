@@ -9,7 +9,7 @@ const CaseStudies = ({ cases }) => {
             {cases.map((item, index) => (
                 <div key={index} className="case-card">
                     <img src={item.image} alt={item.title} />
-                    {item.description && <p>{item.description}</p>}
+                    {item.result && <p>{item.result}</p>}
                 </div>
             ))}
         </div>

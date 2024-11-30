@@ -10,7 +10,6 @@ const AboutUs = () => {
         parrafo="Conoce más sobre nuestro equipo y visión."
         backgroundImage="/images/aboutus.jpg"
         height="50vh"
-        backgroundPosition='center'
       />
       <MVision
       />
