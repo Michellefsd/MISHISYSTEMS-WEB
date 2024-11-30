@@ -1,116 +1,141 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { isValidPhoneNumber } from 'libphonenumber-js';
 import Notification from './Notification';
 import './ContactForm.css';
 
 const ContactForm = () => {
+  // Configuración de EmailJS
+  const serviceID = 'service_acak51r';
+  const templateID = 'template_oz36m38';
+  const publicKey = 'gL5AxWcOi_KU_ZcnB'; // Clave pública
+
+  const form = useRef();
+
+  // Estados para datos del formulario
   const [formData, setFormData] = useState({
-    fullName: '',
+    name: '',
     email: '',
     phone: '',
     message: '',
   });
 
-  const [notification, setNotification] = useState(null); // Manejo de notificaciones
+  const [counter, setCounter] = useState(250); // Contador de caracteres
+  const [validStates, setValidStates] = useState({
+    name: null,
+    email: null,
+    phone: null,
+  });
+  const [notification, setNotification] = useState(null); // Para mostrar mensajes de éxito o error
 
+  // Manejadores de entrada
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Validaciones
-    if (!validateName(formData.fullName)) {
-      setNotification({ type: 'error', message: 'Por favor, introduce un nombre válido.' });
-      return;
-    }
-    if (!validateEmail(formData.email)) {
-      setNotification({ type: 'error', message: 'Por favor, introduce un correo electrónico válido.' });
-      return;
-    }
-    if (!validatePhone(formData.phone)) {
-      setNotification({ type: 'error', message: 'Por favor, introduce un número de teléfono válido.' });
-      return;
-    }
-
-    setNotification({ type: 'success', message: '¡Formulario enviado correctamente!' });
-    console.log('Formulario enviado:', formData);
-
-    setFormData({ fullName: '', email: '', phone: '', message: '' });
+  const handleMessageChange = (e) => {
+    handleChange(e);
+    setCounter(250 - e.target.value.length); // Actualiza el contador
   };
 
-  const validateName = (name) => /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,}$/.test(name);
+  // Validaciones
+  const validateName = () => setValidStates((prev) => ({ ...prev, name: formData.name.trim() !== '' }));
+  const validateEmail = () => {
+    const validator = require('email-validator');
+    setValidStates((prev) => ({ ...prev, email: validator.validate(formData.email.trim()) }));
+  };
+  const validatePhone = () => {
+    const uruguayPhoneRegex = /^(09|2)\d{7}$|^0\d{7}$/;
+    setValidStates((prev) => ({
+      ...prev,
+      phone: uruguayPhoneRegex.test(formData.phone) || isValidPhoneNumber(formData.phone),
+    }));
+  };
 
-  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validateForm = () => {
+    validateName();
+    validateEmail();
+    validatePhone();
+  };
 
-  const validatePhone = (phone) => /^(\+?[0-9]{1,4})?[\s-]?[0-9]{3}[\s-]?[0-9]{6}$/.test(phone);
+  // Envío del formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    validateForm();
+
+    const { name, email, phone } = validStates;
+
+    if (name && email && phone && formData.message.trim() !== '') {
+      emailjs
+        .sendForm(serviceID, templateID, form.current, publicKey) // Se pasa la clave pública aquí
+        .then(() => {
+          setNotification({ type: 'success', message: '¡Mensaje enviado exitosamente!' });
+          setFormData({ name: '', email: '', phone: '', message: '' });
+          setCounter(250); // Reinicia contador
+        })
+        .catch(() =>
+          setNotification({ type: 'error', message: 'Error al enviar. Inténtalo más tarde.' })
+        );
+    } else {
+      setNotification({ type: 'error', message: 'Por favor, completa todos los campos.' });
+    }
+
+    setTimeout(() => setNotification(null), 3000); // Oculta notificación después de 3 segundos
+  };
 
   return (
-    <form className="contact-form" id="contactForm" noValidate action="/send-email" method="POST" onSubmit={handleSubmit}>
+    <div className="contact-form">
       <h2>Contáctanos</h2>
-
-      <div className="form-group">
-        <label htmlFor="fullName">Nombre completo</label>
+      <form ref={form} onSubmit={handleSubmit}>
+        <label>Nombre Completo</label>
         <input
           type="text"
-          id="fullName"
-          name="fullName"
-          value={formData.fullName}
+          name="name"
+          value={formData.name}
           onChange={handleChange}
-          required
-          placeholder="Escribe tu nombre completo"
+          onBlur={validateName}
         />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Correo Electrónico</label>
+        {validStates.name === false && <Notification message="Nombre no válido" />}
+
+        <label>Correo Electrónico</label>
         <input
           type="email"
-          id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          required
-          placeholder="Escribe tu correo electrónico"
+          onBlur={validateEmail}
         />
-      </div>
-      <div className="form-group">
-        <label htmlFor="phone">Teléfono</label>
+        {validStates.email === false && <Notification message="Correo no válido" />}
+
+        <label>Teléfono</label>
         <input
-          type="text"
-          id="phone"
+          type="tel"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          required
-          placeholder="Escribe tu número de teléfono"
+          onBlur={validatePhone}
         />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Mensaje</label>
+        {validStates.phone === false && <Notification message="Teléfono no válido" />}
+
+        <label>Mensaje</label>
         <textarea
-          id="message"
           name="message"
           value={formData.message}
-          onChange={handleChange}
-          required
-          placeholder="Escribe tu mensaje"
+          onChange={handleMessageChange}
+          maxLength="250"
         ></textarea>
-      </div>
-      
-      {/* Mostrar notificación si existe */}
-      {notification && (
-        <Notification
-          type={notification.type}
-          message={notification.message}
-          onClose={() => setNotification(null)}
-        />
-      )}
+        <Notification message={`${counter} caracteres restantes`} />
 
-      <button type="submit" className="submit-button">
-        Enviar
-      </button>
-    </form>
+        <button type="submit">Enviar</button>
+      </form>
+
+      {notification && (
+        <div className={`notification ${notification.type}`}>
+          {notification.message}
+        </div>
+      )}
+    </div>
   );
 };
 
