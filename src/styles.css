@@ -89,6 +89,7 @@ img, video {
 /* Estilos para botones */
 button {
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
   background-color: var(--secondary-lighter-1);
   color: white;
   padding: 10px 20px;

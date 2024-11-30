@@ -7,8 +7,9 @@ const Contact = () => {
     <div>
        <Hero 
         titulo="Contáctanos" 
+        className="just-desktop"
         parrafo="Soluciones que transforman negocios"
-        backgroundImage="/images/contact.png"
+        backgroundImage="/images/contact1.png"
         height="50vh"
         backgroundPosition='top'
       />
