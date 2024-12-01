@@ -13,35 +13,47 @@ const ContactForm = () => {
   const form = useRef();
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    user_name: '', // Asegura que no es undefined
+    user_email: '',
+    user_phone: '',
     message: '',
   });
 
   const [validStates, setValidStates] = useState({
-    name: null,
-    email: null,
-    phone: null,
+    user_name: null,
+    user_email: null,
+    user_phone: null,
   });
 
   const [notification, setNotification] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value || '' }); // Evita undefined
   };
 
-  const validateName = () => setValidStates((prev) => ({ ...prev, user_name: formData.name.trim() !== '' }));
+  const validateName = () => {
+    setValidStates((prev) => ({
+      ...prev,
+      user_name: formData.user_name && formData.user_name.trim() !== '', // Asegura que no es undefined
+    }));
+  };
+
   const validateEmail = () => {
     const validator = require('email-validator');
-    setValidStates((prev) => ({ ...prev, user_email: validator.validate(formData.email.trim()) }));
+    setValidStates((prev) => ({
+      ...prev,
+      user_email: formData.user_email && validator.validate(formData.user_email.trim()), // Asegura que no es undefined
+    }));
   };
+
   const validatePhone = () => {
     const uruguayPhoneRegex = /^(09|2)\d{7}$|^0\d{7}$/;
     setValidStates((prev) => ({
       ...prev,
-      user_phone: uruguayPhoneRegex.test(formData.phone) || isValidPhoneNumber(formData.phone),
+      user_phone:
+        formData.user_phone &&
+        (uruguayPhoneRegex.test(formData.user_phone) || isValidPhoneNumber(formData.user_phone)), // Asegura que no es undefined
     }));
   };
 
@@ -55,14 +67,14 @@ const ContactForm = () => {
     e.preventDefault();
     validateForm();
 
-    const { name, email, phone } = validStates;
+    const { user_name, user_email, user_phone } = validStates;
 
-    if (name && email && phone && formData.message.trim() !== '') {
+    if (user_name && user_email && user_phone && formData.message.trim() !== '') {
       emailjs
         .sendForm(serviceID, templateID, form.current, publicKey)
         .then(() => {
           setNotification({ type: 'success', message: '¡Mensaje enviado exitosamente!' });
-          setFormData({ name: '', email: '', phone: '', message: '' });
+          setFormData({ user_name: '', user_email: '', user_phone: '', message: '' });
           form.current.reset(); // Limpia el formulario tras el envío
         })
         .catch((error) => {
@@ -81,48 +93,48 @@ const ContactForm = () => {
       <h2>Contáctanos</h2>
       <form ref={form} onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Nombre Completo</label>
+          <label htmlFor="user_name">Nombre Completo</label>
           <input
-            id="name"
+            id="user_name"
             type="text"
-            name="name"
-            value={formData.name}
+            name="user_name"
+            value={formData.user_name}
             onChange={handleChange}
             onBlur={validateName}
             placeholder="Ingresa tu nombre completo"
             required
           />
-          {validStates.name === false && <Notification message="Nombre no válido" />}
+          {validStates.user_name === false && <Notification message="Nombre no válido" />}
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Correo Electrónico</label>
+          <label htmlFor="user_email">Correo Electrónico</label>
           <input
-            id="email"
+            id="user_email"
             type="email"
-            name="email"
-            value={formData.email}
+            name="user_email"
+            value={formData.user_email}
             onChange={handleChange}
             onBlur={validateEmail}
             placeholder="Ingresa tu correo electrónico"
             required
           />
-          {validStates.email === false && <Notification message="Correo no válido" />}
+          {validStates.user_email === false && <Notification message="Correo no válido" />}
         </div>
 
         <div className="form-group">
-          <label htmlFor="phone">Teléfono</label>
+          <label htmlFor="user_phone">Teléfono</label>
           <input
-            id="phone"
+            id="user_phone"
             type="tel"
-            name="phone"
-            value={formData.phone}
+            name="user_phone"
+            value={formData.user_phone}
             onChange={handleChange}
             onBlur={validatePhone}
             placeholder="Ingresa tu número de teléfono"
             required
           />
-          {validStates.phone === false && <Notification message="Teléfono no válido" />}
+          {validStates.user_phone === false && <Notification message="Teléfono no válido" />}
         </div>
 
         <div className="form-group">
