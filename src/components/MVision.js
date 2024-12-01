@@ -8,6 +8,8 @@ const MVision = () => {
 
       {/* Módulo 1: Introducción y Misión */}
       <section className="intro-section">
+        <br></br>
+        <br></br>
         <h1 className="section-title">Sobre Nosotros</h1>
 
         {/* Espacio para una imagen representativa */}
@@ -34,6 +36,13 @@ const MVision = () => {
           operativa y simplifiquen la interacción con sus clientes.
         </p>
         <br></br>
+        <h2 className="section-title">Nuestra Visión</h2>
+        <p className="mission-text">
+        Convertirnos en un referente global en transformación digital, 
+        brindando soluciones innovadoras y accesibles que permitan a las 
+        empresas maximizar su potencial, automatizar procesos y conectar 
+        con audiencias internacionales de manera efectiva y sostenible.
+        </p>
       </section>
 
       {/* Módulo 2: Nuestros Valores con Íconos */}
@@ -74,6 +83,8 @@ const MVision = () => {
           <p className="proposition-text">
             Mishi Systems facilita la transformación digital de manera fluida y sencilla. Ayudamos a las empresas a automatizar procesos, optimizar la presencia digital y alcanzar audiencias internacionales con contenidos multilingües.
           </p>
+          <br></br>
+          <br></br>
         </div>
       </section>
 

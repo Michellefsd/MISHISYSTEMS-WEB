@@ -10,6 +10,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Cierra el menú después de hacer clic
+  };
+
   return (
     <header className="header">
       {/* Botón de menú hamburguesa */}
@@ -20,11 +24,11 @@ const Header = () => {
       {/* Menú principal */}
       <nav className={`main-menu ${isMenuOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/services">Servicios</Link></li>
-          <li><Link to="/about">Nosotros</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/contact">Contacto</Link></li>
+          <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
+          <li><Link to="/services" onClick={closeMenu}>Servicios</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>Nosotros</Link></li>
+          <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
+          <li><Link to="/contact" onClick={closeMenu}>Contacto</Link></li>
         </ul>
       </nav>
 
@@ -38,3 +42,4 @@ const Header = () => {
 };
 
 export default Header;
+

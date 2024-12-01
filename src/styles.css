@@ -80,6 +80,10 @@ h6 {
   font-weight: 500;
 }
 
+p {
+  text-align: justify;
+}
+
 /* Estilos básicos para imágenes */
 img, video {
   max-width: 100%;
