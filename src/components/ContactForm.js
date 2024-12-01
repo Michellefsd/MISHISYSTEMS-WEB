@@ -6,13 +6,12 @@ import './ContactForm.css';
 
 const ContactForm = () => {
   // Configuración de EmailJS
-  const serviceID = 'service_acak51r';
-  const templateID = 'template_oz36m38';
-  const publicKey = 'gL5AxWcOi_KU_ZcnB'; // Clave pública
+  const serviceID = 'service_4vf1c79';
+  const templateID = 'template_76w1jg6';
+  const publicKey = 'gL5AxWcOi_KU_ZcnB';
 
   const form = useRef();
 
-  // Estados para datos del formulario
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,36 +19,29 @@ const ContactForm = () => {
     message: '',
   });
 
-  const [counter, setCounter] = useState(250); // Contador de caracteres
   const [validStates, setValidStates] = useState({
     name: null,
     email: null,
     phone: null,
   });
-  const [notification, setNotification] = useState(null); // Para mostrar mensajes de éxito o error
 
-  // Manejadores de entrada
+  const [notification, setNotification] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleMessageChange = (e) => {
-    handleChange(e);
-    setCounter(250 - e.target.value.length); // Actualiza el contador
-  };
-
-  // Validaciones
-  const validateName = () => setValidStates((prev) => ({ ...prev, name: formData.name.trim() !== '' }));
+  const validateName = () => setValidStates((prev) => ({ ...prev, user_name: formData.name.trim() !== '' }));
   const validateEmail = () => {
     const validator = require('email-validator');
-    setValidStates((prev) => ({ ...prev, email: validator.validate(formData.email.trim()) }));
+    setValidStates((prev) => ({ ...prev, user_email: validator.validate(formData.email.trim()) }));
   };
   const validatePhone = () => {
     const uruguayPhoneRegex = /^(09|2)\d{7}$|^0\d{7}$/;
     setValidStates((prev) => ({
       ...prev,
-      phone: uruguayPhoneRegex.test(formData.phone) || isValidPhoneNumber(formData.phone),
+      user_phone: uruguayPhoneRegex.test(formData.phone) || isValidPhoneNumber(formData.phone),
     }));
   };
 
@@ -59,7 +51,6 @@ const ContactForm = () => {
     validatePhone();
   };
 
-  // Envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     validateForm();
@@ -68,72 +59,96 @@ const ContactForm = () => {
 
     if (name && email && phone && formData.message.trim() !== '') {
       emailjs
-        .sendForm(serviceID, templateID, form.current, publicKey) // Se pasa la clave pública aquí
+        .sendForm(serviceID, templateID, form.current, publicKey)
         .then(() => {
           setNotification({ type: 'success', message: '¡Mensaje enviado exitosamente!' });
           setFormData({ name: '', email: '', phone: '', message: '' });
-          setCounter(250); // Reinicia contador
+          form.current.reset(); // Limpia el formulario tras el envío
         })
-        .catch(() =>
-          setNotification({ type: 'error', message: 'Error al enviar. Inténtalo más tarde.' })
-        );
+        .catch((error) => {
+          console.error('Error al enviar:', error.text);
+          setNotification({ type: 'error', message: 'Error al enviar. Inténtalo más tarde.' });
+        });
     } else {
       setNotification({ type: 'error', message: 'Por favor, completa todos los campos.' });
     }
 
-    setTimeout(() => setNotification(null), 3000); // Oculta notificación después de 3 segundos
+    setTimeout(() => setNotification(null), 3000);
   };
 
   return (
     <div className="contact-form">
       <h2>Contáctanos</h2>
       <form ref={form} onSubmit={handleSubmit}>
-        <label>Nombre Completo</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          onBlur={validateName}
-        />
-        {validStates.name === false && <Notification message="Nombre no válido" />}
+        <div className="form-group">
+          <label htmlFor="name">Nombre Completo</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            onBlur={validateName}
+            placeholder="Ingresa tu nombre completo"
+            required
+          />
+          {validStates.name === false && <Notification message="Nombre no válido" />}
+        </div>
 
-        <label>Correo Electrónico</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          onBlur={validateEmail}
-        />
-        {validStates.email === false && <Notification message="Correo no válido" />}
+        <div className="form-group">
+          <label htmlFor="email">Correo Electrónico</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            onBlur={validateEmail}
+            placeholder="Ingresa tu correo electrónico"
+            required
+          />
+          {validStates.email === false && <Notification message="Correo no válido" />}
+        </div>
 
-        <label>Teléfono</label>
-        <input
-          type="tel"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          onBlur={validatePhone}
-        />
-        {validStates.phone === false && <Notification message="Teléfono no válido" />}
+        <div className="form-group">
+          <label htmlFor="phone">Teléfono</label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            onBlur={validatePhone}
+            placeholder="Ingresa tu número de teléfono"
+            required
+          />
+          {validStates.phone === false && <Notification message="Teléfono no válido" />}
+        </div>
 
-        <label>Mensaje</label>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleMessageChange}
-          maxLength="250"
-        ></textarea>
-        <Notification message={`${counter} caracteres restantes`} />
+        <div className="form-group">
+          <label htmlFor="message">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            maxLength="250"
+            placeholder="Escribe tu mensaje aquí"
+            required
+          ></textarea>
+        </div>
 
-        <button type="submit">Enviar</button>
+        <button type="submit" className="submit-button">
+          Enviar
+        </button>
       </form>
 
       {notification && (
-        <div className={`notification ${notification.type}`}>
-          {notification.message}
-        </div>
+        <Notification
+          type={notification.type}
+          message={notification.message}
+          onClose={() => setNotification(null)}
+        />
       )}
     </div>
   );

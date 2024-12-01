@@ -3,11 +3,13 @@ import './Notification.css';
 
 const Notification = ({ type, message, onClose }) => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      onClose(); // Llamar a la función para cerrar la notificación
-    }, 6000);
+    if (onClose) {
+      const timer = setTimeout(() => {
+        onClose(); // Llamar a la función para cerrar la notificación
+      }, 6000);
 
-    return () => clearTimeout(timer); // Limpiar el temporizador al desmontar
+      return () => clearTimeout(timer); // Limpiar el temporizador al desmontar
+    }
   }, [onClose]);
 
   return (
