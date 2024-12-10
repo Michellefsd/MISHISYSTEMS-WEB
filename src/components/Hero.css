@@ -9,6 +9,14 @@
   overflow: hidden;
 }
 
+.heroku {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+
 /* Capa de superposición negra al 40% de opacidad */
 .hero::before {
   content: "";

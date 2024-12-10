@@ -3,7 +3,7 @@
   padding: 20px;
   color: var(--black-color); 
   font-family: 'Raleway', sans-serif;
-  border-top: 2px solid var(--primary-color); 
+  border-top: 5px solid var(--light-bg); 
 }
 
 .footer a {

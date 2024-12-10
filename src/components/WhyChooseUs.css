@@ -1,0 +1,31 @@
+.why-choose-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el div */
+  margin: 40px auto; /* Centra horizontalmente */
+  padding: 20px;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center; /* Título centrado */
+}
+
+.reasons-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenedor */
+  gap: 20px; /* Espacio entre razones */
+  list-style-type: none;
+  padding: 0;
+}
+  
+  .reason-item {
+    font-size: 1.5rem; /* Aumentamos ligeramente el tamaño */
+    color: var(--secondary-darker-4);
+    text-align: start;
+    max-width: 600px; /* Limita el ancho del texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+  }
+  

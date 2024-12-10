@@ -102,6 +102,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+ button:hover{
+  background-color: var(--secondary-lighter-3);
+ }
 
 /* Enlaces */
 a {
@@ -125,6 +128,29 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.split img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .split {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .split img {
+    width: 50%;
+  }
 }
 
 /* Media Queries para dispositivos móviles */

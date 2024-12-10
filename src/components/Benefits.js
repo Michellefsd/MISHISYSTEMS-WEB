@@ -1,15 +1,23 @@
 import React from 'react';
-import Benefit from './Benefit'; // Importa correctamente el componente
-import './Card.css';
-import '../styles.css';
+import Benefit from './Benefit';
+import './Benefits.css';
 
 const Benefits = ({ title, benefits }) => {
     return (
         <div className="benefits">
-            <h3>{title}</h3>
-            <div className="benefits-list">
+            {title && <h3>{title}</h3>}
+            <div className="benefits-grid">
                 {benefits.map((benefit, index) => (
-                    <Benefit key={index} icon={benefit.icon} description={benefit.description} />
+                    <div key={index} className="benefit-item-wrapper">
+                        {benefit.imageURL && (
+                            <img
+                                src={benefit.imageURL}
+                                alt={`Benefit ${index + 1}`}
+                                className="benefit-image"
+                            />
+                        )}
+                        <Benefit description={benefit.description} />
+                    </div>
                 ))}
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import Heroku from '../components/Heroku';
 import Description from '../components/DescriptionService';
 import WhatWeOffer from '../components/WhatWeOffer';
 import Benefits from '../components/Benefits';
@@ -19,26 +19,39 @@ const Service = ({ serviceKey }) => {
 
   return (
     <div className="service-page">
-      <Hero
+      <Heroku
         titulo={service.Hero.titulo}
         parrafo={service.Hero.parrafo}
-        image={service.Hero.backgroundImage}
-        height={service.Hero.height}
-        backgroundPosition={service.Hero.backgroundPosition}
       />
       <div className="service-content">
         <Description text={service.descripcion} />
-        <WhatWeOffer offers={service.whatWeOffer} />
-        <Benefits benefits={service.benefits} />
-        <Approach text={service.approach} />
-        <CaseStudies cases={service.caseStudies} />
-        <WhyChooseUs reasons={service.whyChooseUs} />
-        
+
+        {/* Benefits Section */}
+        <div className="benefits-section">
+          <Benefits title="Nuestros Beneficios" benefits={service.benefits} />
+        </div>
+
+        {/* What We Offer Section */}
+        <div className="service-group">
+          <WhatWeOffer offers={service.whatWeOffer} />
+        </div>
+
+        {/* Approach and Case Studies */}
+        <div className="service-group">
+          <Approach text={service.approach} />
+          <CaseStudies cases={service.caseStudies} />
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="service-group">
+          <WhyChooseUs reasons={service.whyChooseUs} />
+        </div>
+
+       {/* Call to Action */}
         <div className="service-cta">
-        <Button label={service.callToAction.text} text={service.callToAction.text} />
+          <Button text={service.callToAction.text} />
+        </div>
       </div>
-      </div>
-    
     </div>
   );
 };

@@ -3,11 +3,9 @@ import './Hero.css';
 import '../styles.css';
 import Button from '../components/Button';  
 
-const Hero = ({ titulo, parrafo, backgroundImage, botonText, height='80vh', backgroundPosition='top', className = '' }) => {
+const Heroku = ({ titulo, parrafo, botonText, height='25vh', className = '' }) => {
   return (
-    <section className="hero"
-            style={{ backgroundImage: `url(${backgroundImage})`, height: height, backgroundPosition: backgroundPosition}}
-    >
+    <section className="heroku">
       <div className="hero-text">
         <h1 className={`${className}`}>{titulo}</h1> {/* Título dinámico */}
         <p style={{textAlign: 'center', paddingLeft: '18px', paddingRight: '18px'}}>{parrafo}</p> {/* Párrafo dinámico */}
@@ -23,4 +21,4 @@ const Hero = ({ titulo, parrafo, backgroundImage, botonText, height='80vh', back
   );
 }
 
-export default Hero;
+export default Heroku;

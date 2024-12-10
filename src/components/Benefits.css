@@ -1,0 +1,55 @@
+.benefits {
+    margin-top: 40px 100px;
+    padding: 20px;
+    background-color: var(--grey-1);
+    border-radius: 10px;
+}
+
+.benefits h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #222;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.benefit-item-wrapper {
+    display: flex;
+    flex-direction: column; /* Cambia a row si quieres que la imagen esté a la derecha */
+    align-items: center;
+    text-align: center;
+    background: var(--grey-2);
+    padding: 20px 48px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px; /* Ajusta el margen si la imagen está arriba */
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.benefit-item-wrapper > .benefit {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .benefit-item-wrapper {
+        flex-direction: column; /* Cambia esto si quieres que las imágenes se muevan arriba en pantallas pequeñas */
+    }
+}

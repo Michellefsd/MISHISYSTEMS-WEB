@@ -17,18 +17,27 @@
 }
 
 .benefit-item {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--secondary-lighter-1);
+    padding: 20px; /* Aumentado para mayor consistencia */
     border: 1px solid var(--grey-2);
-    border-radius: 5px;
+    border-radius: 8px; /* Más redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregada sombra */
+    text-align: center;
+    gap: 10px; /* Espacio entre los elementos internos */
 }
-  
 
 .benefit-icon {
-    font-size: 2rem;
-    color: #007bff;
+    font-size: 2rem; /* Ajustado a "em" para consistencia */
+    color: var(--tertiary-color); /* Color actualizado */
 }
 
 .benefit-item p {
-    font-size: 1rem;
-    color: #555;
+    margin: 10px 0; /* Espaciado entre texto e íconos */
+    font-size: 1em;
+    line-height: 1.4; /* Mejor legibilidad */
+    color: var(--dark-text-color); /* Color más oscuro */
 }

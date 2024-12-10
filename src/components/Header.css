@@ -25,7 +25,7 @@
 }
 
 .main-menu ul li a:hover {
-  color: var(--primary-darker-3);
+  color: var(--secondary-lighter-3);
   text-shadow: 0px 0px 10px rgba(201, 166, 204, 0.7);
 }
 

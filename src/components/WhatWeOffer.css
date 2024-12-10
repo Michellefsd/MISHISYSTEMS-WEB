@@ -1,0 +1,82 @@
+.what-we-offer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .what-we-offer h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
+  
+  .offers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espacio entre filas */
+  }
+  
+  .offer-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .offer-item.row-normal {
+    flex-direction: row;
+  }
+  
+  .offer-item.row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .offer-description {
+    flex: 1;
+    text-align: left;
+  
+  }
+  
+  .offer-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-darker-4);
+  }
+  
+  .offer-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-text-color);
+  }
+  
+  .offer-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .offer-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .offer-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .offer-item.row-reverse {
+      flex-direction: column;
+    }
+  
+    .offer-description {
+      text-align: center;
+    }
+  
+    .offer-image {
+      margin-top: 20px;
+    }
+  }
+  

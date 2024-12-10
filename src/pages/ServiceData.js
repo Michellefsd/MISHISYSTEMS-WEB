@@ -15,11 +15,12 @@ const ServicesData = [
     },
     descripcion:
       "La transformación digital es una necesidad para competir en el mercado actual. En Mishi Systems, ayudamos a empresas consolidadas y en crecimiento a digitalizar y automatizar sus procesos, optimizando recursos y maximizando resultados.",
+
     benefits: [
-      "Aumenta tu competitividad: Adopta herramientas que te permiten mantenerte a la cabeza en tu industria.",
-      "Optimiza recursos: Reduce costos operativos mientras aumentas la productividad.",
-      "Mejora la experiencia del cliente: Ofrece interacciones más rápidas, personalizadas y satisfactorias.",
-      "Escalabilidad: Prepara tu negocio para crecer sin comprometer la calidad o eficiencia.",
+      { description: 'Aumenta tu competitividad: Adopta herramientas que te permiten mantenerte a la cabeza en tu industria.', imageURL: '/images/icons/grafico-de-linea.png' },
+      { description: 'Optimiza recursos: Reduce costos operativos mientras aumentas la productividad.', imageURL: '/images/icons/acuerdo.png' },
+      { description: 'Mejora la experiencia del cliente: Ofrece interacciones más rápidas, personalizadas y satisfactorias.', imageURL: '/images/icons/objetivo.png' },
+      { description: 'Escalabilidad: Prepara tu negocio para crecer sin comprometer la calidad o eficiencia.', imageURL: '/images/icons/objetivo.png' },
     ],
     whatWeOffer: [
       {
@@ -109,35 +110,40 @@ const ServicesData = [
     descripcion:
       "En Mishi Systems, creamos páginas web que no solo lucen bien, sino que funcionan a la perfección. Nuestro servicio de diseño y desarrollo web combina creatividad, funcionalidad y tecnología para ofrecer una experiencia excepcional a tus clientes.\n \t Podemos integrarnos a una página ya creada usando los lenguajes o frameworks previamente elegidos o empezar una página desde cero, enfocándonos en mostrar el servicio o producto de tu empresa y facilitar el acceso a información y compra disminuyendo el esfuerzo personal en el proceso",
     benefits: [
-      "Mejora tu presencia online: Una página web profesional es tu mejor carta de presentación.",
-      "Aumenta tus conversiones: Diseñamos sitios enfocados en guiar a los visitantes hacia acciones clave, como comprar, registrarse o contactarte.",
-      "Optimiza la experiencia del usuario: Creamos interfaces rápidas, claras y accesibles para ofrecer la mejor navegación posible.",
+      { description: 'Mejora tu presencia online: Una página web profesional es tu mejor carta de presentación.', imageURL: '/images/icons/www.png' },
+      { description: 'Aumenta tus conversiones: Diseñamos sitios enfocados en guiar a los visitantes hacia acciones clave, como comprar, registrarse o contactarte.', imageURL: '/images/icons/grafico-de-linea.png' },
+      { description: 'Optimiza la experiencia del usuario: Creamos interfaces rápidas, claras y accesibles para ofrecer la mejor navegación posible.', imageURL: '/images/icons/objetivo.png' },
     ],
     whatWeOffer: [
       {
         title: "Diseño personalizado",
         description:
           "Creamos páginas web adaptadas a la identidad de tu marca, enfocadas en destacar tus productos o servicios.",
+        imageURL: '/images/web/car2.jpg'
       },
       {
         title: "Optimización para dispositivos móviles",
         description:
           "Garantizamos que tu sitio sea totalmente funcional y atractivo en cualquier dispositivo.",
+        imageURL: '/images/cel-.png'
       },
       {
         title: "Integración de herramientas digitales",
         description:
           "Añadimos funcionalidades como carritos de compra, formularios de contacto, chat en vivo, y más.",
+        imageURL: '/images/web/carr.jpg'
       },
       {
         title: "Multilingüismo",
         description:
           "Diseñamos páginas en varios idiomas para ampliar tu alcance global.",
+        imageURL: '/images/services.jpg'
       },
       {
         title: "SEO desde el inicio",
         description:
           "Implementamos estrategias de optimización para que tu sitio destaque en los motores de búsqueda.",
+        imageURL: '/images/watch-mechanism.png'
       },
     ],
     approach:
@@ -146,7 +152,8 @@ const ServicesData = [
       {
         title: "Caso de éxito: Empresa Ejemplo",
         result:
-          "Gracias a nuestras páginas web personalizadas, empresas como T2Company han logrado atraer a más clientes potenciales y aumentar significativamente la visibilidad de sus productos en línea. Ahora, sus clientes pueden explorar fácilmente las características y el funcionamiento de sus productos a través de una plataforma intuitiva y detallada."
+          "Gracias a nuestras páginas web personalizadas, empresas como T2Company han logrado atraer a más clientes potenciales y aumentar significativamente la visibilidad de sus productos en línea. Ahora, sus clientes pueden explorar fácilmente las características y el funcionamiento de sus productos a través de una plataforma intuitiva y detallada.",
+        image: '/images/t2c.png'
       },
     ],
     whyChooseUs: [
@@ -189,48 +196,55 @@ const ServicesData = [
     Hero: {
       titulo: "Integración de CRMs",
       parrafo: "Optimiza la relación con tus clientes y potencia tus resultados.",
-      backgroundImage: "/images/hubspot.png",
-      height: "400px",
+      height: "25vh",
       backgroundPosition: "center",
     },
+    
     descripcion:
       "En Mishi Systems, entendemos que un CRM (Customer Relationship Management) es mucho más que una herramienta, es el corazón de tu negocio. Nuestro servicio de integración de CRMs está diseñado para que tu equipo tenga todo lo necesario para gestionar clientes, ventas y procesos con eficacia.",
+
     benefits: [
-      "Mejora la gestión de clientes: Centraliza toda la información de tus clientes en un solo lugar para tomar decisiones más rápidas y efectivas.",
-      "Aumenta las ventas: Automatiza el seguimiento de leads y cierra negocios más rápido.",
-      "Optimiza el marketing: Segmenta audiencias y lanza campañas más efectivas basadas en datos reales.",
-      "Facilita la colaboración: Tu equipo tendrá acceso a la misma información en tiempo real, mejorando la coordinación y el rendimiento.",
+      { description: 'Mejora la gestión de clientes: Centraliza toda la información de tus clientes en un solo lugar para tomar decisiones más rápidas y efectivas.', imageURL: '/images/icons/grafico-de-linea.png' },
+      { description: 'Aumenta las ventas: Automatiza el seguimiento de leads y cierra negocios más rápido.', imageURL: '/images/icons/acuerdo.png' },
+      { description: 'Optimiza el marketing: Segmenta audiencias y lanza campañas más efectivas basadas en datos reales.', imageURL: '/images/icons/objetivo.png' },
+      { description: 'Facilita la colaboración: Tu equipo tendrá acceso a la misma información en tiempo real, mejorando la coordinación y el rendimiento.', imageURL: '/images/icons/inclusion.png' },
     ],
     whatWeOffer: [
       {
         title: "Selección del CRM adecuado",
         description:
           "Te ayudamos a elegir la plataforma que mejor se adapte a las necesidades de tu empresa, como HubSpot, Salesforce o Zoho CRM.",
+        imageURL: '/images/CRMs.png'
       },
       {
         title: "Configuración personalizada",
         description:
           "Diseñamos e implementamos un CRM adaptado a tus procesos específicos, asegurando que sea fácil de usar y altamente eficiente.",
+        imageURL: '/images/watch-mechanism.png'
       },
       {
         title: "Automatización de procesos",
         description:
           "Configuramos flujos de trabajo automáticos para ventas, marketing y soporte, reduciendo tareas repetitivas y mejorando la productividad.",
+        imageURL: '/images/workflow.jpg'
       },
       {
         title: "Integración con herramientas existentes",
         description:
           "Conectamos el CRM con otras plataformas que ya usas, como tu sitio web, email marketing, y sistemas ERP.",
+        imageURL: '/images/puzzle.jpg'
       },
       {
         title: "Capacitación del equipo",
         description:
           "Nos acercamos a tu equipo para que éste aproveche al máximo el CRM con sesiones de consultas y dirección de adaptación alas nuevas herramientas.",
+        imageURL: '/images/benefit1.jpg'
       },
       {
         title: "Soporte continuo",
         description:
           "Te acompañamos en el mantenimiento y optimización del CRM para adaptar mejor la herramienta basados en estadísticas, y asegurar que funcione cada vez mejor",
+        imageURL: '/images/computer.jpg'
       },
     ],
     approach:
@@ -239,7 +253,8 @@ const ServicesData = [
       {
         title: "Caso de éxito: Empresa Ejemplo",
         result:
-        "Gracias a nuestras integraciones, empresas como T2Company han implementado exitosamente su CRM, logrando que su equipo adopte las herramientas de manera eficiente. Seguimos brindando soporte continuo para maximizar el aprovechamiento del sistema y adaptarlo a las necesidades cambiantes de la empresa."
+        "Gracias a nuestras integraciones, empresas como T2Company han implementado exitosamente su CRM, logrando que su equipo adopte las herramientas de manera eficiente. Seguimos brindando soporte continuo para maximizar el aprovechamiento del sistema y adaptarlo a las necesidades cambiantes de la empresa.",
+        image: '/images/t2c.png'
       },
     ],
     whyChooseUs: [
@@ -277,13 +292,14 @@ const ServicesData = [
     },
     descripcion:
       "En Mishi Systems, entendemos que un soporte eficiente y claro es esencial para la experiencia del cliente y la optimización operativa. Nuestro servicio de soporte automatizado combina documentación profesional y contenido visual impactante para transformar tus procesos en herramientas de aprendizaje y soporte autónomo.",
-    benefits: [
-      "Acelera el aprendizaje: Reduce el tiempo de capacitación con materiales bien estructurados y visualmente atractivos.",
-      "Mejora la experiencia del cliente: Ofrece soporte claro y accesible que fortalezca la relación con tus usuarios.",
-      "Aumenta el engagement: El contenido visual atrae más atención y retiene mejor la información.",
-      "Facilita la resolución de problemas: Una buena documentación ahorra tiempo en soporte técnico y aumenta la autonomía del usuario.",
-      "Mejora la percepción de tu marca: Proyecta profesionalismo y calidad con contenido visual bien elaborado.",
-    ],
+      benefits: [
+        { description: 'Acelera el aprendizaje: Reduce el tiempo de capacitación con materiales bien estructurados y visualmente atractivos.', imageURL: '/images/icons/grafico-de-linea.png' },
+        { description: 'Mejora la experiencia del cliente: Ofrece soporte claro y accesible que fortalezca la relación con tus usuarios.', imageURL: '/images/icons/acuerdo.png' },
+        { description: 'Aumenta el engagement: El contenido visual atrae más atención y retiene mejor la información.', imageURL: '/images/icons/objetivo.png' },
+        { description: 'Mejora la percepción de tu marca: Proyecta profesionalismo y calidad con contenido visual bien elaborado.', imageURL: '/images/icons/objetivo.png' },
+        { description: 'Facilita la resolución de problemas: Una buena documentación ahorra tiempo en soporte técnico y aumenta la autonomía del usuario.', imageURL: '/images/icons/inclusion.png' },
+      ],
+
     whatWeOffer: [
       {
         title: "Mapeo de procesos",
@@ -369,10 +385,11 @@ const ServicesData = [
     },
     descripcion:
       "En Mishi Systems, entendemos que la comunicación efectiva es esencial para conectar con audiencias internacionales. Nuestro servicio de contenido multilingüe está diseñado para empresas que buscan llevar sus productos o servicios más allá de las fronteras, garantizando una experiencia auténtica y personalizada para cada cliente.",
+
     benefits: [
-      "Aumenta tu mercado objetivo: Accede a clientes en diferentes países sin barreras idiomáticas.",
-      "Mejora tu reputación: Muestra tu compromiso con la diversidad cultural y la atención al detalle.",
-      "Incrementa tus conversiones: Los clientes confían más en empresas que comunican en su idioma.",
+      { description: 'Aumenta tu mercado objetivo: Accede a clientes en diferentes países sin barreras idiomáticas.', imageURL: '/images/icons/grafico-de-linea.png' },
+      { description: 'Mejora tu reputación: Muestra tu compromiso con la diversidad cultural y la atención al detalle.', imageURL: '/images/icons/acuerdo.png' },
+      { description: 'Incrementa tus conversiones: Los clientes confían más en empresas que comunican en su idioma.', imageURL: '/images/icons/objetivo.png' },
     ],
     whatWeOffer: [
       {

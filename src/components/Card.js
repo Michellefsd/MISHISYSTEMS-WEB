@@ -13,6 +13,7 @@ const Card = ({ title, description, buttonLabel, onButtonClick, backgroundColor,
       <div className="card-content">
         <h2 className="card-title">{title}</h2>
         <p className="card-description">{description}</p>
+        <br></br>
         <button className="card-button" onClick={onButtonClick}>
           {buttonLabel}
         </button>

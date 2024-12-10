@@ -1,28 +1,34 @@
 .case-studies {
-    margin-top: 40px;
-  }
-  
-  .case-studies-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .case-item {
-    background-color: var(--white-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .case-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .case-item img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 400px;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-card img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.case-card p {
+  font-size: 1.2rem;
+  color: var(--dark-text-color);
+  margin-top: 10px;
+}
