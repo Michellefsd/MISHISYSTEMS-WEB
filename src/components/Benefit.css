@@ -1,6 +1,6 @@
 .benefits {
     padding: 20px;
-    background-color: var(--grey-1); /* Fondo claro */
+    background-color: var(--grey-1);
     border-radius: 10px;
 }
 
@@ -22,22 +22,22 @@
     align-items: center;
     justify-content: space-between;
     background: var(--secondary-lighter-1);
-    padding: 20px; /* Aumentado para mayor consistencia */
+    padding: 20px;
     border: 1px solid var(--grey-2);
-    border-radius: 8px; /* Más redondeado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregada sombra */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    gap: 10px; /* Espacio entre los elementos internos */
+    gap: 10px;
 }
 
 .benefit-icon {
-    font-size: 2rem; /* Ajustado a "em" para consistencia */
-    color: var(--tertiary-color); /* Color actualizado */
+    font-size: 2rem; 
+    color: var(--tertiary-color); 
 }
 
 .benefit-item p {
-    margin: 10px 0; /* Espaciado entre texto e íconos */
+    margin: 10px 0; 
     font-size: 1em;
-    line-height: 1.4; /* Mejor legibilidad */
-    color: var(--dark-text-color); /* Color más oscuro */
+    line-height: 1.4;
+    color: var(--dark-text-color); 
 }

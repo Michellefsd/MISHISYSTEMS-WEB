@@ -10,7 +10,6 @@ const ServicesData = [
       titulo: "Transformación Digital",
       parrafo: "Impulsa tu negocio hacia el futuro.",
       backgroundImage: "/images/transformacion-digital.jpg",
-      height: "400px",
       backgroundPosition: "center",
     },
     descripcion:
@@ -102,7 +101,6 @@ const ServicesData = [
 
     Hero: {
       titulo: "Diseño y Desarrollo de Páginas Web",
-      parrafo: "Convierte tu página web en el corazón de tu negocio digital.",
       backgroundImage: "/images/web-page.jpg",
       height: "400px",
       backgroundPosition: "center",
@@ -196,7 +194,6 @@ const ServicesData = [
     Hero: {
       titulo: "Integración de CRMs",
       parrafo: "Optimiza la relación con tus clientes y potencia tus resultados.",
-      height: "25vh",
       backgroundPosition: "center",
     },
     
@@ -377,8 +374,6 @@ const ServicesData = [
 
     Hero: {
       titulo: "Contenido Multilingüe para Empresas Globales",
-      parrafo:
-        "Expande tu alcance con contenido adaptado a cada idioma y cultura.",
       backgroundImage: "/images/services.jpg",
       height: "400px",
       backgroundPosition: "center",

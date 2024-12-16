@@ -20,8 +20,16 @@
 
 @media (max-width: 900px) {
   .service-content {
-    padding: 60;
+    padding: 60px;
     margin: 0 48px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .service-content {
+    padding: 32px;
+    margin: 0;
   }
 }
 
@@ -55,6 +63,11 @@
 
 .benefits-section {
   background-color: var(--secondary-lighter-1);
+}
+@media (max-width: 768px) {
+  .benefits-section {
+    margin: 32px 0;
+  }
 }
 
 .approach-section {
