@@ -292,7 +292,7 @@ const ServicesData = [
       benefits: [
         { description: 'Acelera el aprendizaje: Reduce el tiempo de capacitación con materiales bien estructurados y visualmente atractivos.', imageURL: '/images/icons/grafico-de-linea.png' },
         { description: 'Mejora la experiencia del cliente: Ofrece soporte claro y accesible que fortalezca la relación con tus usuarios.', imageURL: '/images/icons/acuerdo.png' },
-        { description: 'Aumenta el engagement: El contenido visual atrae más atención y retiene mejor la información.', imageURL: '/images/icons/objetivo.png' },
+       /* /* description: 'Aumenta el engagement: El contenido visual atrae más atención y retiene mejor la información.', imageURL: '/images/icons/objetivo.png' */
         { description: 'Mejora la percepción de tu marca: Proyecta profesionalismo y calidad con contenido visual bien elaborado.', imageURL: '/images/icons/objetivo.png' },
         { description: 'Facilita la resolución de problemas: Una buena documentación ahorra tiempo en soporte técnico y aumenta la autonomía del usuario.', imageURL: '/images/icons/inclusion.png' },
       ],
@@ -327,11 +327,6 @@ const ServicesData = [
         title: "Animaciones e infografías",
         description:
           "Diseñamos gráficos animados que simplifican conceptos complejos de manera atractiva.",
-      },
-      {
-        title: "Edición de video personalizada",
-        description:
-          "Transformamos tu material bruto en piezas profesionales que se alinean con tu mensaje y marca.",
       },
     ],
     approach:
