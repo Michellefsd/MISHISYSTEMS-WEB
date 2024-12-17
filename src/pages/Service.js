@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Heroku from '../components/Heroku';
 import Description from '../components/DescriptionService';
 import WhatWeOffer from '../components/WhatWeOffer';
@@ -9,9 +9,15 @@ import Approach from '../components/Approach';
 import Button from '../components/Button';
 import servicesData from '../pages/ServiceData';
 import './Service.css';
+import BackArrow from '../components/Arrow';
 
 const Service = ({ serviceKey }) => {
   const service = servicesData.find((s) => s.serviceKey === serviceKey);
+
+  // Asegura el scroll al inicio cuando el componente se monta
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll al top
+  }, []);
 
   if (!service) {
     return <p>Servicio no encontrado</p>;
@@ -23,6 +29,8 @@ const Service = ({ serviceKey }) => {
         titulo={service.Hero.titulo}
         parrafo={service.Hero.parrafo}
       />
+      <BackArrow />
+
       <div className="service-content">
         <Description text={service.descripcion} />
 

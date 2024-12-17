@@ -64,7 +64,7 @@ const ServicesData = [
       "Equipo experto en tecnologías avanzadas y procesos empresariales.",
     ],
     callToAction: {
-      text: "¡Agenda una consulta gratuita ahora!",
+      text: "¡Agenda una consulta ahora!",
     },
   },
 
@@ -102,7 +102,7 @@ const ServicesData = [
     Hero: {
       titulo: "Diseño y Desarrollo de Páginas Web",
       backgroundImage: "/images/web-page.jpg",
-      height: "400px",
+      height: "450px",
       backgroundPosition: "center",
     },
     descripcion:
@@ -223,7 +223,7 @@ const ServicesData = [
         title: "Automatización de procesos",
         description:
           "Configuramos flujos de trabajo automáticos para ventas, marketing y soporte, reduciendo tareas repetitivas y mejorando la productividad.",
-        imageURL: '/images/workflow.jpg'
+        imageURL: '/images/workflow.png'
       },
       {
         title: "Integración con herramientas existentes",
@@ -345,7 +345,7 @@ const ServicesData = [
       "Capacidad de adaptación a cualquier tipo de sistema, aplicación o plataforma.",
     ],
     callToAction: {
-      text: "¡Habla con nosotros sobre tu proyecto de soporte automatizado!",
+      text: "¡Habla con nosotros!",
     },
   },
 
@@ -423,7 +423,7 @@ const ServicesData = [
       "Soporte en múltiples formatos y plataformas.",
     ],
     callToAction: {
-      text: "¡Solicita una consulta gratuita!",
+      text: "¡Solicita una consulta!",
     },
   },
 ];

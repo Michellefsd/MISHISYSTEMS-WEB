@@ -29,12 +29,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
-
+/*
 .benefit-item-wrapper:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
+*/
 .benefit-image {
     width: 100%;
     max-width: 150px;

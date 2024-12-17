@@ -97,3 +97,17 @@
   text-align: center;
   margin-top: 40px;
 }
+
+@media (max-width: 768px) {
+  .service-group {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    gap: 20px; /* Espacio entre los elementos */
+  }
+
+  .service-group img {
+    max-width: 180px; /* La imagen ocupa todo el ancho disponible */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+  }
+}

@@ -3,7 +3,7 @@ import './Hero.css';
 import '../styles.css';
 import Button from '../components/Button';  
 
-const Heroku = ({ titulo, parrafo, botonText, height='25vh', className = '' }) => {
+const Heroku = ({ titulo, parrafo, botonText, height='38vh', className = '' }) => {
   return (
     <section className="heroku">
       <div className="hero-text">
