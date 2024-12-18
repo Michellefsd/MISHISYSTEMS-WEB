@@ -98,7 +98,7 @@
   margin-top: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .service-group {
     flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center; /* Centra los elementos en el eje horizontal */
