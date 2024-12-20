@@ -37,7 +37,7 @@
 */
 .benefit-image {
     width: 100%;
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
     margin-bottom: 15px; /* Ajusta el margen si la imagen está arriba */
     border-radius: 8px;

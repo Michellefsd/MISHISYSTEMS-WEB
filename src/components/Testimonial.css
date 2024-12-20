@@ -1,5 +1,7 @@
 /* Tarjeta testimonial */
 .testimonial-card {
+  flex-direction: column; /* Acomoda los elementos verticalmente en pantallas pequeñas */
+  text-align: center;
   display: flex;
   align-items: center;
   gap: 20px; /* Espacio entre la imagen y el testimonio */
