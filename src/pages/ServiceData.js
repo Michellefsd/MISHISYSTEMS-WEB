@@ -26,26 +26,31 @@ const ServicesData = [
         title: "Análisis estratégico",
         description:
           "Evaluamos tus procesos actuales para identificar áreas clave de mejora.",
+        imageURL: '/images/services/multi/SEO.jpg',
       },
       {
         title: "Automatización de marketing",
         description:
           "Implementamos herramientas como HubSpot para optimizar el ciclo de ventas, desde la captación de leads hasta el soporte para clientes.",
+        imageURL: '/images/services/digital/digital-marketing.jpg',  
       },
       {
         title: "Digitalización de procesos",
         description:
           "Eliminamos las barreras tradicionales convirtiendo tus procesos manuales en flujos digitales eficientes.",
+        imageURL: '/images/services/digital/hands.jpg',  
       },
       {
         title: "Creación de canales digitales",
         description:
           "Diseñamos y desarrollamos páginas web, blogs y plataformas interactivas que expanden tu alcance.",
+        imageURL: '/images/services/digital/digital.jpg',
       },
       {
         title: "Capacitación y soporte",
         description:
           "Aseguramos una adopción exitosa de las nuevas tecnologías con capacitación personalizada y soporte continuo.",
+        imageURL: '/images/services/digital/call.png',  
       },
     ],
     approach:
@@ -302,32 +307,41 @@ const ServicesData = [
         title: "Mapeo de procesos",
         description:
           "Analizamos y organizamos cada flujo dentro de tus aplicaciones, desde las funciones básicas hasta las más avanzadas.",
-      },
+        imageURL: '/images/services/soporte/mapeo.png',
+        },
       {
         title: "Manual de usuario profesional",
         description:
           "Creamos guías detalladas, fáciles de entender y visualmente atractivas para tus equipos o clientes.",
-      },
+        imageURL: '/images/services/soporte/1.png',
+        },
       {
         title: "Documentación técnica",
         description:
           "Desarrollamos especificaciones y guías técnicas dirigidas a desarrolladores o equipos especializados.",
-      },
+          imageURL: '/images/services/soporte/2.png',
+        },
       {
         title: "Traducción multilingüe",
         description:
           "Adaptamos tu documentación a múltiples idiomas con precisión, ideal para mercados internacionales.",
-      },
+          imageURL: '/images/services/soporte/multilingue.png',
+        },
       {
         title: "Videos tutoriales",
         description:
           "Creamos videos claros y dinámicos para explicar tus productos o servicios, ideales para entrenar equipos o captar clientes.",
-      },
-      {
+          imageURL: '/images/services/soporte/camera.jpg',
+        },
+
+
+      /*{
         title: "Animaciones e infografías",
         description:
           "Diseñamos gráficos animados que simplifican conceptos complejos de manera atractiva.",
-      },
+      },*/
+
+
     ],
     approach:
       "Combinamos un análisis exhaustivo de tus procesos con herramientas modernas para crear documentación profesional y personalizada, junto con contenido visual que cautiva y comunica. Trabajamos contigo desde la conceptualización hasta la entrega final, asegurándonos de que cada elemento cumpla con tus objetivos.",
@@ -386,26 +400,31 @@ const ServicesData = [
         title: "Traducción profesional",
         description:
           "Adaptamos tu contenido con precisión, manteniendo el tono, estilo y mensaje original en cada idioma.",
+        imageURL: '/images/services/multi/japo.jpg',
       },
       {
         title: "Localización cultural",
         description:
           "No solo traducimos, sino que ajustamos tu mensaje para que resuene con el público local, respetando sus valores y normas culturales.",
+        imageURL: '/images/services/multi/children.jpg',
       },
       {
         title: "Soporte en múltiples formatos",
         description:
           "Creamos y traducimos páginas web, documentos técnicos, tutoriales, guías de usuario y más.",
+        imageURL: '/images/services/multi/balloon.jpg',
       },
       {
         title: "Optimización SEO multilingüe",
         description:
           "Nos aseguramos de que tu contenido sea fácilmente encontrado en los motores de búsqueda en cada mercado objetivo.",
+        imageURL: '/images/services/multi/SEO.jpg',      
       },
       {
         title: "Disponibilidad de idiomas",
         description:
-          "Disponibilizamos la traducción al portugués, Inglés, Italiano, Francés y Alemán. Consulte por otros idiomas.",
+          "Disponibilizamos la traducción al Portugués, Inglés, Italiano, Francés y Alemán. Consulte por otros idiomas.",
+        imageURL: '/images/services/multi/pencil.jpg',
       },
     ],
     approach:
