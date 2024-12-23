@@ -50,14 +50,20 @@
     margin-top: 10px;
 }
 
-@media (max-width: 520px) {
-    .benefit-item-wrapper {
-        flex-direction: column; /* Cambia esto si quieres que las imágenes se muevan arriba en pantallas pequeñas */
-    }
-}
 
 @media (max-width: 768px) {
-    benefits-grid {
-        display: column;
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Una sola columna para centrar los elementos */
+        gap: 15px; /* Reduce el espacio entre las tarjetas */
+    }
+
+    .benefit-item-wrapper {
+        max-width: 90%; /* Asegura que no sea demasiado ancha */
+        margin: 0 auto; /* Centra la tarjeta */
+        border: none; /* Elimina el borde azul */
+    }
+
+    .benefit-image {
+        max-width: 80px; /* Reduce ligeramente el tamaño de la imagen en móviles */
     }
 }
