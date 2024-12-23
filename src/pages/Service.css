@@ -64,9 +64,9 @@
 .benefits-section {
   background-color: var(--secondary-lighter-1);
 }
-@media (max-width: 768px) {
+@media (max-width: 520px) {
   .benefits-section {
-    margin: 0;
+    margin: 20px 0;
     padding: 0px;
   }
 }
