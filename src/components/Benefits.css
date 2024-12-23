@@ -14,13 +14,13 @@
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .benefit-item-wrapper {
     display: flex;
-    flex-direction: column; /* Cambia a row si quieres que la imagen esté a la derecha */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     background: var(--grey-2);
@@ -29,12 +29,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
+
 /*
 .benefit-item-wrapper:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 */
+
 .benefit-image {
     width: 100%;
     max-width: 100px;
@@ -48,8 +50,14 @@
     margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 520px) {
     .benefit-item-wrapper {
         flex-direction: column; /* Cambia esto si quieres que las imágenes se muevan arriba en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    benefits-grid {
+        display: column;
     }
 }
