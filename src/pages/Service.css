@@ -67,6 +67,7 @@
 @media (max-width: 768px) {
   .benefits-section {
     margin: 32px 0;
+    padding: 6px;
   }
 }
 

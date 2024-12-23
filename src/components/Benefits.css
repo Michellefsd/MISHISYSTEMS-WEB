@@ -52,18 +52,22 @@
 
 
 @media (max-width: 768px) {
+    benefits{
+        padding: 0;
+    }
+
     .benefits-grid {
-        grid-template-columns: 1fr; /* Una sola columna para centrar los elementos */
-        gap: 15px; /* Reduce el espacio entre las tarjetas */
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .benefit-item-wrapper {
-        max-width: 90%; /* Asegura que no sea demasiado ancha */
-        margin: 0 auto; /* Centra la tarjeta */
-        border: none; /* Elimina el borde azul */
+        max-width: 100%; 
+        margin: 0 auto; 
+        border: none; 
     }
 
     .benefit-image {
-        max-width: 80px; /* Reduce ligeramente el tamaño de la imagen en móviles */
+        max-width: 80px;
     }
 }
