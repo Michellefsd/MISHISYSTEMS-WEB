@@ -40,5 +40,10 @@
     font-size: 1em;
     line-height: 1.4;
     color: var(--dark-text-color); 
-    text-align: center;
+}
+
+@media(max-width: 768px) {
+    .benefit-item p {
+        text-align: center;
+    }
 }

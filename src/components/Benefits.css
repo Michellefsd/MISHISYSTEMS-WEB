@@ -51,9 +51,9 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 520px) {
     .benefits{
-        padding: 0;
+        padding: 0px;
     }
 
     .benefits-grid {
