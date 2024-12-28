@@ -1,11 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { useLocation } from 'react-router-dom';  // Importa useLocation
 import { isValidPhoneNumber } from 'libphonenumber-js';
 import Notification from './Notification';
 import './ContactForm.css';
 
 const ContactForm = () => {
-  // Configuración de EmailJS
+  const { search } = useLocation();
+  const serviceIdFromUrl = new URLSearchParams(search).get('service_id');  // Extrae el service_id de la URL
+
   const serviceID = 'service_4vf1c79';
   const templateID = 'template_76w1jg6';
   const publicKey = 'gL5AxWcOi_KU_ZcnB';
@@ -13,10 +16,11 @@ const ContactForm = () => {
   const form = useRef();
 
   const [formData, setFormData] = useState({
-    user_name: '', // Asegura que no es undefined
+    user_name: '',
     user_email: '',
     user_phone: '',
     message: '',
+    service_id: serviceIdFromUrl || serviceID, // Aquí se asigna el service_id dinámico
   });
 
   const [validStates, setValidStates] = useState({
@@ -29,13 +33,13 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value || '' }); // Evita undefined
+    setFormData({ ...formData, [name]: value || '' });
   };
 
   const validateName = () => {
     setValidStates((prev) => ({
       ...prev,
-      user_name: formData.user_name && formData.user_name.trim() !== '', // Asegura que no es undefined
+      user_name: formData.user_name && formData.user_name.trim() !== '',
     }));
   };
 
@@ -43,7 +47,7 @@ const ContactForm = () => {
     const validator = require('email-validator');
     setValidStates((prev) => ({
       ...prev,
-      user_email: formData.user_email && validator.validate(formData.user_email.trim()), // Asegura que no es undefined
+      user_email: formData.user_email && validator.validate(formData.user_email.trim()),
     }));
   };
 
@@ -53,7 +57,7 @@ const ContactForm = () => {
       ...prev,
       user_phone:
         formData.user_phone &&
-        (uruguayPhoneRegex.test(formData.user_phone) || isValidPhoneNumber(formData.user_phone)), // Asegura que no es undefined
+        (uruguayPhoneRegex.test(formData.user_phone) || isValidPhoneNumber(formData.user_phone)),
     }));
   };
 
@@ -74,8 +78,8 @@ const ContactForm = () => {
         .sendForm(serviceID, templateID, form.current, publicKey)
         .then(() => {
           setNotification({ type: 'success', message: '¡Mensaje enviado exitosamente!' });
-          setFormData({ user_name: '', user_email: '', user_phone: '', message: '' });
-          form.current.reset(); // Limpia el formulario tras el envío
+          setFormData({ user_name: '', user_email: '', user_phone: '', message: '', service_id: serviceID });
+          form.current.reset();
         })
         .catch((error) => {
           console.error('Error al enviar:', error.text);
@@ -106,6 +110,12 @@ const ContactForm = () => {
           />
           {validStates.user_name === false && <Notification message="Nombre no válido" />}
         </div>
+
+        <input
+          type="hidden"
+          name="service_id"
+          value={formData.service_id} // Este es el campo oculto
+        />
 
         <div className="form-group">
           <label htmlFor="user_email">Correo Electrónico</label>

@@ -19,10 +19,10 @@
 }
 
 /* Card hover effect */
-.card:hover {
+/*.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Image styling */
 .card-image {

@@ -57,7 +57,8 @@ const Service = ({ serviceKey }) => {
 
        {/* Call to Action */}
         <div className="service-cta">
-          <Button text={service.callToAction.text} />
+          <Button text={service.callToAction.text}   onClick={() => window.location.href = `/contacto?service_id=${service.id}`
+          }/>
         </div>
       </div>
     </div>

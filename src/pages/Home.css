@@ -1,8 +1,13 @@
 .testimonials-container {
     display: flex;
-    overflow-x: auto; /* Habilita el scroll lateral */
     gap: 20px; /* Espacio entre las columnas */
     padding: 10px;
-    scroll-behavior: smooth; /* Suaviza el scroll lateral */
+    scroll-behavior: smooth;
   }
+
+@media (max-width: 992px) {
+  .testimonials-container {
+    display: block;
+  }
+}
   

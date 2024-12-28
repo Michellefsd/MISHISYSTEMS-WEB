@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.css';
-import '../styles.css'
+import '../styles.css';
+import Button from '../components/Button';
 
 const Card = ({ title, description, buttonLabel, onButtonClick, backgroundColor, imageSrc }) => {
   const cardStyle = {
@@ -14,9 +15,9 @@ const Card = ({ title, description, buttonLabel, onButtonClick, backgroundColor,
         <h2 className="card-title">{title}</h2>
         <p className="card-description">{description}</p>
         <br></br>
-        <button className="card-button" onClick={onButtonClick}>
+        <Button className="card-button" text='Más Información' onClick={onButtonClick}>
           {buttonLabel}
-        </button>
+        </Button>
       </div>
     </div>
   );

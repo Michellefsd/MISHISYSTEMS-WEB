@@ -102,9 +102,6 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
- button:hover{
-  background-color: var(--secondary-lighter-3);
- }
 
 /* Enlaces */
 a {

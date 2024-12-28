@@ -89,7 +89,7 @@
 }
 
 header .hamburger-menu:hover {
-  background-color: none;
+  background-color: none !important;
 }
 
 /* Ocultar el botón hamburguesa por defecto */

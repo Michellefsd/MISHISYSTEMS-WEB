@@ -53,6 +53,12 @@
   text-align: left;
 }
 
+@media (max-width: 992px) {
+  .testimonial-card {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonial-card {
     flex-direction: column; /* Acomoda los elementos verticalmente en pantallas pequeñas */

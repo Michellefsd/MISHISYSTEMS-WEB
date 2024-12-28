@@ -8,10 +8,18 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative; /* Añadido para controlar la posición sin afectar otras clases */
 }
-
 .custom-button:hover {
   background-color: var(--secondary-lighter-3);
-  transition: ease-in all .6s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); 
+
+  transition: background-color 0.6s ease-in, box-shadow 0.6s ease-in, text-shadow 0.6s ease-in;
+}
+
+/* Nueva clase para el movimiento sutil */
+.hover-move:hover {
+  transform: translate(0.5px, -0.5px); /* Movimiento sutil hacia arriba y a la derecha */
+  transition: transform 0.3s ease-in; /* Solo para el movimiento */
 }
