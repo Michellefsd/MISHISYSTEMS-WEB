@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
 import Blog from './pages/Blog';
-import Contact from './pages/Contact';
+import ContactForm from './pages/Contact'; // Asegúrate de que "Contact" exporta ContactForm
 import ServiceWrapper from './pages/ServiceWrapper'; // Importa el componente para servicios individuales
 
 function App() {
@@ -17,10 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/:serviceKey" element={<ServiceWrapper />} />        {/* Ruta dinámica */}
+          <Route path="/services/:serviceKey" element={<ServiceWrapper />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* Ruta de contacto */}
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
         <Footer />
       </div>

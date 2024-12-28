@@ -1,28 +1,33 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useLocation } from 'react-router-dom';  // Importa useLocation
+import { useLocation } from 'react-router-dom'; // Para leer "?selected_service=..."
 import { isValidPhoneNumber } from 'libphonenumber-js';
 import Notification from './Notification';
 import './ContactForm.css';
 
 const ContactForm = () => {
+  // Lee el parámetro "?selected_service=..." de la URL.
   const { search } = useLocation();
-  const serviceIdFromUrl = new URLSearchParams(search).get('service_id');  // Extrae el service_id de la URL
+  const serviceIdFromUrl = new URLSearchParams(search).get('selected_service'); // p.e. 'transformacion_digital'
 
-  const serviceID = 'service_4vf1c79';
+  // Estos son los datos de tu servicio de EmailJS (visita dashboard.emailjs.com/admin).
+  const ServiceID = 'service_4vf1c79'; 
   const templateID = 'template_76w1jg6';
-  const publicKey = 'gL5AxWcOi_KU_ZcnB';
+  const publicKey = '_oCo-39wvLdKkhQmw';
 
   const form = useRef();
 
+  // Estado local del formulario
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
     user_phone: '',
     message: '',
-    service_id: serviceIdFromUrl || serviceID, // Aquí se asigna el service_id dinámico
+    // Valor que viene de la URL. No lo mezcles con el Service ID de EmailJS.
+    selectedService: serviceIdFromUrl || '',
   });
 
+  // Estados para validaciones sencillas
   const [validStates, setValidStates] = useState({
     user_name: null,
     user_email: null,
@@ -31,11 +36,13 @@ const ContactForm = () => {
 
   const [notification, setNotification] = useState(null);
 
+  // Manejadores de cambio
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value || '' });
+    setFormData((prev) => ({ ...prev, [name]: value || '' }));
   };
 
+  // Validaciones de cada campo
   const validateName = () => {
     setValidStates((prev) => ({
       ...prev,
@@ -67,26 +74,46 @@ const ContactForm = () => {
     validatePhone();
   };
 
+  // Envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     validateForm();
 
     const { user_name, user_email, user_phone } = validStates;
 
+    // Verifica que todo sea válido
     if (user_name && user_email && user_phone && formData.message.trim() !== '') {
+      // Envía con EmailJS
       emailjs
-        .sendForm(serviceID, templateID, form.current, publicKey)
+        .sendForm(ServiceID, templateID, form.current, publicKey)
         .then(() => {
-          setNotification({ type: 'success', message: '¡Mensaje enviado exitosamente!' });
-          setFormData({ user_name: '', user_email: '', user_phone: '', message: '', service_id: serviceID });
+          setNotification({
+            type: 'success',
+            message: '¡Mensaje enviado exitosamente!',
+          });
+
+          // Resetea el formulario
+          setFormData({
+            user_name: '',
+            user_email: '',
+            user_phone: '',
+            message: '',
+            selectedService: '',
+          });
           form.current.reset();
         })
         .catch((error) => {
           console.error('Error al enviar:', error.text);
-          setNotification({ type: 'error', message: 'Error al enviar. Inténtalo más tarde.' });
+          setNotification({
+            type: 'error',
+            message: 'Error al enviar. Inténtalo más tarde.',
+          });
         });
     } else {
-      setNotification({ type: 'error', message: 'Por favor, completa todos los campos.' });
+      setNotification({
+        type: 'error',
+        message: 'Por favor, completa todos los campos.',
+      });
     }
 
     setTimeout(() => setNotification(null), 3000);
@@ -96,6 +123,7 @@ const ContactForm = () => {
     <div className="contact-form">
       <h2>Contáctanos</h2>
       <form ref={form} onSubmit={handleSubmit}>
+        {/* Nombre */}
         <div className="form-group">
           <label htmlFor="user_name">Nombre Completo</label>
           <input
@@ -111,12 +139,14 @@ const ContactForm = () => {
           {validStates.user_name === false && <Notification message="Nombre no válido" />}
         </div>
 
+        {/* Campo oculto con el servicio de interés */}
         <input
           type="hidden"
           name="service_id"
-          value={formData.service_id} // Este es el campo oculto
+          value={formData.selectedService}
         />
 
+        {/* Correo */}
         <div className="form-group">
           <label htmlFor="user_email">Correo Electrónico</label>
           <input
@@ -132,6 +162,7 @@ const ContactForm = () => {
           {validStates.user_email === false && <Notification message="Correo no válido" />}
         </div>
 
+        {/* Teléfono */}
         <div className="form-group">
           <label htmlFor="user_phone">Teléfono</label>
           <input
@@ -147,6 +178,7 @@ const ContactForm = () => {
           {validStates.user_phone === false && <Notification message="Teléfono no válido" />}
         </div>
 
+        {/* Mensaje */}
         <div className="form-group">
           <label htmlFor="message">Mensaje</label>
           <textarea
@@ -160,11 +192,13 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
+        {/* Botón de enviar */}
         <button type="submit" className="submit-button">
           Enviar
         </button>
       </form>
 
+      {/* Notificación global */}
       {notification && (
         <Notification
           type={notification.type}

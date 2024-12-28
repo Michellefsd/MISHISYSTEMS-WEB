@@ -16,7 +16,7 @@ const Service = ({ serviceKey }) => {
 
   // Asegura el scroll al inicio cuando el componente se monta
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll al top
+    window.scrollTo(0, 0);
   }, []);
 
   if (!service) {
@@ -55,10 +55,15 @@ const Service = ({ serviceKey }) => {
           <WhyChooseUs reasons={service.whyChooseUs} />
         </div>
 
-       {/* Call to Action */}
+        {/* Call to Action */}
         <div className="service-cta">
-          <Button text={service.callToAction.text}   onClick={() => window.location.href = `/contacto?service_id=${service.id}`
-          }/>
+          <Button
+            text={service.callToAction.text}
+            onClick={() =>
+              // Cambiamos a "/contact?selected_service=..." para que coincida
+              window.location.href = `/contact?selected_service=${service.serviceKey}`
+            }
+          />
         </div>
       </div>
     </div>
