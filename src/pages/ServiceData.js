@@ -382,7 +382,7 @@ const ServicesData = [
     imageSrc: "/images/services.jpg",
 
     Hero: {
-      titulo: "Contenido Multilingüe para Empresas Globales",
+      titulo: "Contenido Multilingüe",
       backgroundImage: "/images/services.jpg",
       height: "400px",
       backgroundPosition: "center",
