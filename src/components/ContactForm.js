@@ -23,8 +23,7 @@ const ContactForm = () => {
     user_email: '',
     user_phone: '',
     message: '',
-    // Valor que viene de la URL. No lo mezcles con el Service ID de EmailJS.
-    selectedService: serviceIdFromUrl || '',
+    selectedService: serviceIdFromUrl || 'contact',
   });
 
   // Estados para validaciones sencillas
@@ -142,9 +141,10 @@ const ContactForm = () => {
         {/* Campo oculto con el servicio de interés */}
         <input
           type="hidden"
-          name="service_id"
-          value={formData.selectedService}
+          name="selected_service"
+          value={formData.selectedService || 'contact'} 
         />
+        
 
         {/* Correo */}
         <div className="form-group">

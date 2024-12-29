@@ -33,10 +33,12 @@ const Header = () => {
       </nav>
 
       {/* Contenedor del logo */}
+      <Link to="/">
       <div className="logo-container">
         <div className="div-de-img"></div>
         <img src="logo_192.png" alt="MishiSystems logo" className="logo" />
       </div>
+      </Link>
     </header>
   );
 };
